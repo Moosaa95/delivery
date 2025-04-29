@@ -9,7 +9,7 @@ export default function AirFreightService() {
       <section className="relative h-[300px] md:h-[400px] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/air-freight-banner.jpg"
+            src="/images/airfreight-hero.jpg"
             alt="Air Freight Service"
             fill
             className="object-cover brightness-50"
@@ -187,7 +187,7 @@ export default function AirFreightService() {
                   </div>
                   <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
                     <Image
-                      src="/images/air-freight-cargo.jpg"
+                      src="/images/air.jpg"
                       alt="Air freight cargo loading"
                       fill
                       className="object-cover"
@@ -331,7 +331,7 @@ export default function AirFreightService() {
                     <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                       <div className="relative h-48">
                         <Image
-                          src="/images/ocean-fcl.jpg"
+                          src="/images/ocean-fcl-container.jpg"
                           alt="Ocean FCL (Import / Export)"
                           fill
                           className="object-cover"
@@ -355,7 +355,7 @@ export default function AirFreightService() {
                     <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                       <div className="relative h-48">
                         <Image
-                          src="/images/customs-compliance.jpg"
+                          src="/images/customs-compliance-banner.jpg"
                           alt="Customs Compliance"
                           fill
                           className="object-cover"

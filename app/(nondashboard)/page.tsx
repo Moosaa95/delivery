@@ -246,7 +246,7 @@ export default function Home() {
                 className="flex-1 px-6 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-300"
               />
               <Link
-                href="/track-parcel"
+                href="/track"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-full font-medium transition-all whitespace-nowrap"
               >
                 Track Now
@@ -394,12 +394,12 @@ export default function Home() {
             >
               Contact Us
             </Link>
-            <Link
+            {/* <Link
               href="/quote"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-full font-medium transition-colors"
             >
               Get a Quote
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

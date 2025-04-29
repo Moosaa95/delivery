@@ -169,7 +169,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/contact"
+                    href="/contact-us"
                     className="px-4 py-2 rounded-md text-gray-800 hover:text-teal-600 font-medium transition-colors"
                   >
                     Contact

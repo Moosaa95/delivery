@@ -1,468 +1,215 @@
-// "use client"
-
-// import type React from "react"
-
-// import { useState } from "react"
-// import { Search, Package, MapPin, Truck, CheckCircle, Clock, AlertCircle } from "lucide-react"
-// import Link from "next/link"
-
-// export default function TrackPage() {
-//   const [trackingNumber, setTrackingNumber] = useState("")
-//   const [isSubmitted, setIsSubmitted] = useState(false)
-//   const [trackingResult, setTrackingResult] = useState<TrackingResult | null>(null)
-
-//   interface TrackingEvent {
-//     date: string
-//     time: string
-//     location: string
-//     status: string
-//     description: string
-//   }
-
-//   interface TrackingResult {
-//     trackingNumber: string
-//     status: "in-transit" | "delivered" | "exception" | "pending"
-//     estimatedDelivery: string
-//     service: string
-//     origin: string
-//     destination: string
-//     events: TrackingEvent[]
-//   }
-
-//   const handleSubmit = (e: React.FormEvent) => {
-//     e.preventDefault()
-//     if (!trackingNumber.trim()) return
-
-//     // Simulate tracking result
-//     const mockResult: TrackingResult = {
-//       trackingNumber: trackingNumber,
-//       status: ["in-transit", "delivered", "exception", "pending"][Math.floor(Math.random() * 4)] as any,
-//       estimatedDelivery: "April 18, 2025",
-//       service: "Express International",
-//       origin: "New York, USA",
-//       destination: "London, UK",
-//       events: [
-//         {
-//           date: "April 14, 2025",
-//           time: "10:30 AM",
-//           location: "London Sorting Facility, UK",
-//           status: "In Transit",
-//           description: "Package is out for delivery",
-//         },
-//         {
-//           date: "April 13, 2025",
-//           time: "8:45 PM",
-//           location: "London Heathrow Airport, UK",
-//           status: "In Transit",
-//           description: "Package has arrived at regional facility",
-//         },
-//         {
-//           date: "April 12, 2025",
-//           time: "3:20 PM",
-//           location: "Paris Charles de Gaulle Airport, France",
-//           status: "In Transit",
-//           description: "Package in transit to next facility",
-//         },
-//         {
-//           date: "April 11, 2025",
-//           time: "11:15 AM",
-//           location: "New York JFK Airport, USA",
-//           status: "In Transit",
-//           description: "Package has departed from origin facility",
-//         },
-//         {
-//           date: "April 10, 2025",
-//           time: "2:30 PM",
-//           location: "New York Sorting Facility, USA",
-//           status: "Processed",
-//           description: "Package processed at origin facility",
-//         },
-//         {
-//           date: "April 10, 2025",
-//           time: "9:45 AM",
-//           location: "New York, USA",
-//           status: "Information Received",
-//           description: "Shipping information received",
-//         },
-//       ],
-//     }
-
-//     setTrackingResult(mockResult)
-//     setIsSubmitted(true)
-//   }
-
-//   const getStatusColor = (status: string) => {
-//     switch (status.toLowerCase()) {
-//       case "in-transit":
-//         return "text-blue-600 bg-blue-100"
-//       case "delivered":
-//         return "text-green-600 bg-green-100"
-//       case "exception":
-//         return "text-red-600 bg-red-100"
-//       case "pending":
-//         return "text-yellow-600 bg-yellow-100"
-//       default:
-//         return "text-gray-600 bg-gray-100"
-//     }
-//   }
-
-//   const getStatusIcon = (status: string) => {
-//     switch (status.toLowerCase()) {
-//       case "in-transit":
-//         return <Truck className="w-5 h-5" />
-//       case "delivered":
-//         return <CheckCircle className="w-5 h-5" />
-//       case "exception":
-//         return <AlertCircle className="w-5 h-5" />
-//       case "pending":
-//         return <Clock className="w-5 h-5" />
-//       default:
-//         return <Package className="w-5 h-5" />
-//     }
-//   }
-
-//   return (
-//     <main className="min-h-screen py-12 bg-gray-50">
-//       <div className="container mx-auto px-4">
-//         <div className="max-w-4xl mx-auto">
-//           <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">Track Your Shipment</h1>
-
-//           <div className="bg-white rounded-xl shadow-md p-6 mb-8">
-//             <form onSubmit={handleSubmit} className="space-y-4">
-//               <div>
-//                 <label htmlFor="tracking" className="block text-sm font-medium text-gray-700 mb-1">
-//                   Enter Tracking Number
-//                 </label>
-//                 <div className="relative">
-//                   <input
-//                     id="tracking"
-//                     type="text"
-//                     value={trackingNumber}
-//                     onChange={(e) => setTrackingNumber(e.target.value)}
-//                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-//                     placeholder="e.g. SWIFT1234567890"
-//                     required
-//                   />
-//                 </div>
-//               </div>
-
-//               <button
-//                 type="submit"
-//                 className="w-full bg-gradient-to-r from-purple-600 to-teal-500 text-white py-3 px-6 rounded-lg font-medium flex items-center justify-center hover:from-purple-700 hover:to-teal-600 transition-colors"
-//               >
-//                 <Search className="w-5 h-5 mr-2" />
-//                 Track Shipment
-//               </button>
-//             </form>
-//           </div>
-
-//           {isSubmitted && trackingResult && (
-//             <div className="bg-white rounded-xl shadow-md overflow-hidden">
-//               {/* Tracking Header */}
-//               <div className="bg-gradient-to-r from-purple-600 to-teal-500 p-6 text-white">
-//                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-//                   <div>
-//                     <h2 className="text-2xl font-bold mb-2">Tracking Number: {trackingResult.trackingNumber}</h2>
-//                     <p className="text-white/80">Service: {trackingResult.service}</p>
-//                   </div>
-//                   <div
-//                     className={`mt-4 md:mt-0 px-4 py-2 rounded-full flex items-center ${getStatusColor(
-//                       trackingResult.status,
-//                     )}`}
-//                   >
-//                     {getStatusIcon(trackingResult.status)}
-//                     <span className="ml-2 font-medium capitalize">{trackingResult.status.replace("-", " ")}</span>
-//                   </div>
-//                 </div>
-//               </div>
-
-//               {/* Tracking Summary */}
-//               <div className="p-6 border-b border-gray-200">
-//                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-//                   <div>
-//                     <p className="text-sm text-gray-500 mb-1">Estimated Delivery</p>
-//                     <p className="font-medium">{trackingResult.estimatedDelivery}</p>
-//                   </div>
-//                   <div>
-//                     <p className="text-sm text-gray-500 mb-1">From</p>
-//                     <div className="flex items-start">
-//                       <MapPin className="w-4 h-4 text-gray-400 mt-1 mr-1" />
-//                       <p className="font-medium">{trackingResult.origin}</p>
-//                     </div>
-//                   </div>
-//                   <div>
-//                     <p className="text-sm text-gray-500 mb-1">To</p>
-//                     <div className="flex items-start">
-//                       <MapPin className="w-4 h-4 text-gray-400 mt-1 mr-1" />
-//                       <p className="font-medium">{trackingResult.destination}</p>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-
-//               {/* Tracking Timeline */}
-//               <div className="p-6">
-//                 <h3 className="text-lg font-bold mb-6">Shipment Progress</h3>
-//                 <div className="space-y-6">
-//                   {trackingResult.events.map((event, index) => (
-//                     <div key={index} className="flex">
-//                       <div className="mr-4 relative">
-//                         <div
-//                           className={`w-4 h-4 rounded-full ${
-//                             index === 0 ? "bg-teal-500" : "bg-gray-300"
-//                           } flex items-center justify-center`}
-//                         >
-//                           {index === 0 && <div className="w-2 h-2 rounded-full bg-white"></div>}
-//                         </div>
-//                         {index < trackingResult.events.length - 1 && (
-//                           <div className="w-0.5 bg-gray-300 absolute top-4 bottom-0 left-1/2 -translate-x-1/2"></div>
-//                         )}
-//                       </div>
-//                       <div className={`pb-6 ${index === trackingResult.events.length - 1 ? "pb-0" : ""}`}>
-//                         <div className="flex flex-col sm:flex-row sm:items-center mb-1">
-//                           <p className="font-medium text-gray-900">{event.status}</p>
-//                           <div className="sm:ml-4 text-sm text-gray-500">
-//                             {event.date} • {event.time}
-//                           </div>
-//                         </div>
-//                         <p className="text-gray-600 mb-1">{event.description}</p>
-//                         <p className="text-sm text-gray-500">{event.location}</p>
-//                       </div>
-//                     </div>
-//                   ))}
-//                 </div>
-//               </div>
-
-//               {/* Actions */}
-//               <div className="p-6 bg-gray-50 border-t border-gray-200">
-//                 <div className="flex flex-wrap gap-4">
-//                   <Link
-//                     href="/contact"
-//                     className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
-//                   >
-//                     Need Help?
-//                   </Link>
-//                   <button
-//                     onClick={() => window.print()}
-//                     className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors"
-//                   >
-//                     Print Details
-//                   </button>
-//                 </div>
-//               </div>
-//             </div>
-//           )}
-
-//           {/* Tracking Help */}
-//           <div className="mt-12 bg-white rounded-xl shadow-md p-6">
-//             <h2 className="text-xl font-bold mb-6">Tracking Information</h2>
-//             <div className="space-y-6">
-//               <div>
-//                 <h3 className="font-medium text-lg mb-2">How to Track Your Shipment</h3>
-//                 <p className="text-gray-600">
-//                   Enter your tracking number in the field above and click "Track Shipment" to get real-time updates on
-//                   your package's status and location.
-//                 </p>
-//               </div>
-
-//               <div>
-//                 <h3 className="font-medium text-lg mb-2">Where to Find Your Tracking Number</h3>
-//                 <p className="text-gray-600">
-//                   Your tracking number can be found in your shipping confirmation email, receipt, or in your Swift
-//                   Logistics account dashboard.
-//                 </p>
-//               </div>
-
-//               <div>
-//                 <h3 className="font-medium text-lg mb-2">Understanding Tracking Statuses</h3>
-//                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
-//                   <div className="flex items-center p-3 bg-blue-50 rounded-lg">
-//                     <Truck className="w-5 h-5 text-blue-600 mr-3" />
-//                     <div>
-//                       <p className="font-medium text-blue-800">In Transit</p>
-//                       <p className="text-sm text-blue-700">Your package is on its way</p>
-//                     </div>
-//                   </div>
-//                   <div className="flex items-center p-3 bg-green-50 rounded-lg">
-//                     <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
-//                     <div>
-//                       <p className="font-medium text-green-800">Delivered</p>
-//                       <p className="text-sm text-green-700">Your package has been delivered</p>
-//                     </div>
-//                   </div>
-//                   <div className="flex items-center p-3 bg-yellow-50 rounded-lg">
-//                     <Clock className="w-5 h-5 text-yellow-600 mr-3" />
-//                     <div>
-//                       <p className="font-medium text-yellow-800">Pending</p>
-//                       <p className="text-sm text-yellow-700">Your shipment is being processed</p>
-//                     </div>
-//                   </div>
-//                   <div className="flex items-center p-3 bg-red-50 rounded-lg">
-//                     <AlertCircle className="w-5 h-5 text-red-600 mr-3" />
-//                     <div>
-//                       <p className="font-medium text-red-800">Exception</p>
-//                       <p className="text-sm text-red-700">There's an issue with your shipment</p>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-
-//               <div>
-//                 <h3 className="font-medium text-lg mb-2">Need Help?</h3>
-//                 <p className="text-gray-600">
-//                   If you're having trouble tracking your shipment or have questions about your delivery, please contact
-//                   our customer service team at (800) 123-4567 or email us at{" "}
-//                   <a href="mailto:support@swiftlogistics.com" className="text-teal-600 hover:underline">
-//                     support@swiftlogistics.com
-//                   </a>
-//                   .
-//                 </p>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </main>
-//   )
-// }
-
-
 "use client"
 
-import type React from "react"
-
-import { useState } from "react"
-import { Search, Package, Truck, CheckCircle, Clock, AlertCircle, Info, Phone, Mail } from "lucide-react"
+import { useState, useEffect } from "react"
+import { Search, Package, Truck, CheckCircle, AlertCircle, Clock, Info, Phone, Mail } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+
+// Define interfaces for the tracking data
+interface TrackingEvent {
+  id?: number
+  date: string
+  time?: string
+  location: string
+  status?: string
+  description: string
+}
+
+interface ShipmentDetails {
+  trackingNumber: string
+  referenceNumber?: string
+  shippingDate: string
+  expectedDelivery: string
+  senderName?: string
+  senderAddress?: string
+  senderEmail?: string
+  senderPhone?: string
+  shipFrom: string
+  receiverName?: string
+  receiverAddress?: string
+  receiverPhone?: string
+  receiverEmail?: string
+  deliveryLocation: string
+  shipmentType?: string
+  deliveryWeight: string
+  numberOfPieces?: string
+  costOfDelivery?: string
+  packageImage?: string
+}
+
+interface TrackingResult {
+  trackingNumber: string
+  status: "in-transit" | "delivered" | "exception" | "pending"
+  estimatedDelivery: string
+  service: string
+  origin: string
+  destination: string
+  events: TrackingEvent[]
+  shipmentDetails: ShipmentDetails
+}
 
 export default function TrackPage() {
   const [trackingNumber, setTrackingNumber] = useState("")
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [trackingResult, setTrackingResult] = useState<TrackingResult | null>(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  interface TrackingEvent {
-    date: string
-    time: string
-    location: string
-    status: string
-    description: string
+  // Function to fetch shipment data from API
+  const fetchShipmentData = async (trackingNum: string) => {
+    setIsLoading(true)
+    setError(null)
+    
+    try {
+      // Fetch shipment data directly with the tracking number
+      const response = await fetch(`/api/shipments/${trackingNum}`)
+      
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status}`)
+      }
+      
+      const data = await response.json()
+      
+      // Check if we found a shipment
+      if (!data || !data.id) {
+        throw new Error("No shipment found with this tracking number")
+      }
+      
+      // Parse event dates and times
+      const events = data.tracking_events?.map((event: any) => {
+        // Parse date and time from the format "Apr 20, 2025 - 06:38 PM"
+        const dateTimeParts = event.date.split(' - ')
+        const date = dateTimeParts[0]
+        const time = dateTimeParts.length > 1 ? dateTimeParts[1] : ''
+        
+        // Parse status from description if it contains a colon
+        let status = "Update"
+        let description = event.description
+        
+        if (event.description.includes(': ')) {
+          const parts = event.description.split(': ')
+          status = parts[0]
+          description = parts[1]
+        }
+        
+        return {
+          id: event.id,
+          date,
+          time,
+          location: event.location,
+          status,
+          description
+        }
+      }) || []
+      
+      // Transform the API data to match the TrackingResult interface
+      const formattedResult: TrackingResult = {
+        trackingNumber: data.id,
+        status: mapStatusToUI(data.status),
+        estimatedDelivery: data.estimated_delivery || "Not available",
+        service: data.service || "Standard",
+        origin: data.origin || "Not specified",
+        destination: data.destination || "Not specified",
+        events,
+        shipmentDetails: {
+          trackingNumber: data.id,
+          referenceNumber: data.customer || "Not available",
+          shippingDate: data.date || formatDate(data.created_at),
+          expectedDelivery: data.estimated_delivery || "Not available",
+          senderName: data.customer_name || "Not available",
+          senderAddress: data.origin_address || "Not available",
+          senderEmail: data.customer_email || "Not available",
+          senderPhone: data.customer_phone || "Not available",
+          shipFrom: data.origin || "Not available",
+          receiverName: "Not available", // Not provided in the sample data
+          receiverAddress: data.destination_address || "Not available",
+          receiverPhone: "Not available", // Not provided in the sample data
+          receiverEmail: "Not available", // Not provided in the sample data
+          deliveryLocation: data.destination || "Not available",
+          shipmentType: data.service || "Package",
+          deliveryWeight: `${data.weight || "0"} kg`,
+          numberOfPieces: data.dimensions ? `Dimensions: ${data.dimensions}` : "1 Box",
+          costOfDelivery: "Not available", // Not provided in the sample data
+          packageImage: "/images/package-image.jpg", // Default image
+        }
+      }
+      
+      setTrackingResult(formattedResult)
+      setIsSubmitted(true)
+    } catch (err) {
+      console.error("Error fetching shipment:", err)
+      setError(err instanceof Error ? err.message : "Failed to fetch shipment information")
+    } finally {
+      setIsLoading(false)
+    }
   }
 
-  interface ShipmentDetails {
-    trackingNumber: string
-    referenceNumber: string
-    shippingDate: string
-    expectedDelivery: string
-    senderName: string
-    senderAddress: string
-    senderEmail: string
-    senderPhone: string
-    shipFrom: string
-    receiverName: string
-    receiverAddress: string
-    receiverPhone: string
-    receiverEmail: string
-    deliveryLocation: string
-    shipmentType: string
-    deliveryWeight: string
-    numberOfPieces: string
-    costOfDelivery: string
-    packageImage?: string
+  // Helper functions for formatting
+  const formatDate = (dateString?: string) => {
+    if (!dateString) return "Not available"
+    
+    try {
+      const date = new Date(dateString)
+      return date.toLocaleDateString('en-US', { 
+        month: 'long', 
+        day: 'numeric', 
+        year: 'numeric' 
+      })
+    } catch (e) {
+      return dateString
+    }
   }
 
-  interface TrackingResult {
-    trackingNumber: string
-    status: "in-transit" | "delivered" | "exception" | "pending"
-    estimatedDelivery: string
-    service: string
-    origin: string
-    destination: string
-    events: TrackingEvent[]
-    shipmentDetails: ShipmentDetails
+  const formatTime = (dateString?: string) => {
+    if (!dateString) return "Not available"
+    
+    try {
+      const date = new Date(dateString)
+      return date.toLocaleTimeString('en-US', { 
+        hour: 'numeric', 
+        minute: 'numeric',
+        hour12: true
+      })
+    } catch (e) {
+      return "Not available"
+    }
+  }
+
+  const formatCurrency = (amount?: number | string) => {
+    if (!amount) return "Not available"
+    
+    try {
+      const numAmount = typeof amount === 'string' ? parseFloat(amount) : amount
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+      }).format(numAmount)
+    } catch (e) {
+      return `${amount}`
+    }
+  }
+
+  // Map API status to UI status
+  const mapStatusToUI = (status?: string): "in-transit" | "delivered" | "exception" | "pending" => {
+    if (!status) return "pending"
+    
+    const statusLower = status.toLowerCase()
+    
+    if (statusLower.includes("deliver")) return "delivered"
+    if (statusLower.includes("transit") || statusLower.includes("ship") || 
+        statusLower.includes("arrived") || statusLower.includes("processed") || 
+        statusLower.includes("depart")) return "in-transit"
+    if (statusLower.includes("exception") || statusLower.includes("held") || 
+        statusLower.includes("problem") || statusLower.includes("fail")) return "exception"
+    
+    return "pending"
   }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!trackingNumber.trim()) return
-
-    // Simulate tracking result with detailed shipment information
-    const mockResult: TrackingResult = {
-      trackingNumber: trackingNumber,
-      status: ["in-transit", "delivered", "exception", "pending"][Math.floor(Math.random() * 4)] as any,
-      estimatedDelivery: "April 18, 2025",
-      service: "Express International",
-      origin: "Abu Dhabi, UAE",
-      destination: "Chester, VT, USA",
-      events: [
-        {
-          date: "April 14, 2025",
-          time: "10:30 AM",
-          location: "Chester Distribution Center, VT, USA",
-          status: "In Transit",
-          description: "Package is out for delivery",
-        },
-        {
-          date: "April 13, 2025",
-          time: "8:45 PM",
-          location: "Boston Logan Airport, MA, USA",
-          status: "In Transit",
-          description: "Package has arrived at regional facility",
-        },
-        {
-          date: "April 12, 2025",
-          time: "3:20 PM",
-          location: "London Heathrow Airport, UK",
-          status: "In Transit",
-          description: "Package in transit to next facility",
-        },
-        {
-          date: "April 11, 2025",
-          time: "11:15 AM",
-          location: "Dubai International Airport, UAE",
-          status: "In Transit",
-          description: "Package has departed from origin facility",
-        },
-        {
-          date: "April 10, 2025",
-          time: "2:30 PM",
-          location: "Abu Dhabi Sorting Facility, UAE",
-          status: "Processed",
-          description: "Package processed at origin facility",
-        },
-        {
-          date: "April 02, 2025",
-          time: "9:45 AM",
-          location: "Abu Dhabi, UAE",
-          status: "Information Received",
-          description: "Shipping information received",
-        },
-      ],
-      shipmentDetails: {
-        trackingNumber: trackingNumber || "SWIFT7327510138",
-        referenceNumber: "UAE007327518138",
-        shippingDate: "April 02, 2025",
-        expectedDelivery: "April 18, 2025",
-        senderName: "Dwayne Strand",
-        senderAddress: "Abu Dhabi - UAE",
-        senderEmail: "dwayne4strand@gmail.com",
-        senderPhone: "+1 (347) 651-0080",
-        shipFrom: "United Arab Emirates",
-        receiverName: "Vicki Negron",
-        receiverAddress: "1609 Mattson Rd, Chester, VT 05143, USA",
-        receiverPhone: "+1 (802) 289-1119",
-        receiverEmail: "vickinegron1961@yahoo.com",
-        deliveryLocation: "United States of America",
-        shipmentType: "Package",
-        deliveryWeight: "31.2kg",
-        numberOfPieces: "1 Box",
-        costOfDelivery: "13,590 Dirham",
-        packageImage: "/images/package-image.jpg",
-      },
-    }
-
-    setTrackingResult(mockResult)
-    setIsSubmitted(true)
+    
+    fetchShipmentData(trackingNumber.trim())
   }
 
   const getStatusColor = (status: string) => {
@@ -496,7 +243,7 @@ export default function TrackPage() {
   }
 
   return (
-    <main className="min-h-screen py-12 bg-gray-50">
+    <main className="min-h-screen py-12 bg-gray-50 text-black">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">Track Your Shipment</h1>
@@ -514,7 +261,7 @@ export default function TrackPage() {
                     value={trackingNumber}
                     onChange={(e) => setTrackingNumber(e.target.value)}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
-                    placeholder="e.g. SWIFT1234567890"
+                    placeholder="e.g. CRU6551978271"
                     required
                   />
                 </div>
@@ -522,13 +269,41 @@ export default function TrackPage() {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-purple-600 to-teal-500 text-white py-3 px-6 rounded-lg font-medium flex items-center justify-center hover:from-purple-700 hover:to-teal-600 transition-colors"
+                disabled={isLoading}
+                className={`w-full bg-gradient-to-r from-purple-600 to-teal-500 text-white py-3 px-6 rounded-lg font-medium flex items-center justify-center hover:from-purple-700 hover:to-teal-600 transition-colors ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
-                <Search className="w-5 h-5 mr-2" />
-                Track Shipment
+                {isLoading ? (
+                  <>
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Tracking...
+                  </>
+                ) : (
+                  <>
+                    <Search className="w-5 h-5 mr-2" />
+                    Track Shipment
+                  </>
+                )}
               </button>
             </form>
           </div>
+
+          {/* Error Message */}
+          {error && (
+            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-8">
+              <div className="flex">
+                <div className="flex-shrink-0">
+                  <AlertCircle className="h-5 w-5 text-red-400" />
+                </div>
+                <div className="ml-3">
+                  <h3 className="text-sm font-medium">Error tracking shipment</h3>
+                  <p className="mt-2 text-sm">{error}</p>
+                </div>
+              </div>
+            </div>
+          )}
 
           {isSubmitted && trackingResult && (
             <div className="bg-white rounded-xl shadow-md overflow-hidden mb-8">
@@ -602,11 +377,9 @@ export default function TrackPage() {
                       <p className="font-medium">{trackingResult.shipmentDetails.shipmentType}</p>
                     </div>
 
-                    <div className="flex items-center gap-4">
-                      <div>
-                        <p className="text-sm text-gray-500">Sender's Email:</p>
-                        <p className="font-medium">{trackingResult.shipmentDetails.senderEmail}</p>
-                      </div>
+                    <div>
+                      <p className="text-sm text-gray-500">Sender's Email:</p>
+                      <p className="font-medium">{trackingResult.shipmentDetails.senderEmail}</p>
                     </div>
 
                     <div>
@@ -647,18 +420,14 @@ export default function TrackPage() {
                       <p className="font-medium capitalize">{trackingResult.status.replace("-", " ")}</p>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <p className="text-sm text-gray-500">Delivery Weight:</p>
                         <p className="font-medium">{trackingResult.shipmentDetails.deliveryWeight}</p>
                       </div>
                       <div>
-                        <p className="text-sm text-gray-500">No. of Pieces:</p>
+                        <p className="text-sm text-gray-500">Dimensions:</p>
                         <p className="font-medium">{trackingResult.shipmentDetails.numberOfPieces}</p>
-                      </div>
-                      <div>
-                        <p className="text-sm text-gray-500">Cost of Delivery:</p>
-                        <p className="font-medium">{trackingResult.shipmentDetails.costOfDelivery}</p>
                       </div>
                     </div>
                   </div>
@@ -675,9 +444,14 @@ export default function TrackPage() {
                     />
                   </div>
                   <div className="relative h-64 rounded-lg overflow-hidden border border-gray-200">
-                    <Image src="/images/package-image.jpg" alt="Your package" fill className="object-cover" />
+                    <Image 
+                      src={trackingResult.shipmentDetails.packageImage || "/images/package-image.jpg"} 
+                      alt="Your package" 
+                      fill 
+                      className="object-cover" 
+                    />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                      <p className="text-white font-medium">Your Package</p>
+                      <p className="text-white font-medium">Package Visualization</p>
                     </div>
                   </div>
                 </div>
@@ -686,34 +460,42 @@ export default function TrackPage() {
               {/* Tracking Timeline */}
               <div className="p-6 border-b border-gray-200">
                 <h3 className="text-lg font-bold mb-6">Shipment Progress</h3>
-                <div className="space-y-6">
-                  {trackingResult.events.map((event, index) => (
-                    <div key={index} className="flex">
-                      <div className="mr-4 relative">
-                        <div
-                          className={`w-4 h-4 rounded-full ${
-                            index === 0 ? "bg-teal-500" : "bg-gray-300"
-                          } flex items-center justify-center`}
-                        >
-                          {index === 0 && <div className="w-2 h-2 rounded-full bg-white"></div>}
-                        </div>
-                        {index < trackingResult.events.length - 1 && (
-                          <div className="w-0.5 bg-gray-300 absolute top-4 bottom-0 left-1/2 -translate-x-1/2"></div>
-                        )}
-                      </div>
-                      <div className={`pb-6 ${index === trackingResult.events.length - 1 ? "pb-0" : ""}`}>
-                        <div className="flex flex-col sm:flex-row sm:items-center mb-1">
-                          <p className="font-medium text-gray-900">{event.status}</p>
-                          <div className="sm:ml-4 text-sm text-gray-500">
-                            {event.date} • {event.time}
+                {trackingResult.events && trackingResult.events.length > 0 ? (
+                  <div className="space-y-6">
+                    {trackingResult.events.map((event, index) => (
+                      <div key={event.id || index} className="flex">
+                        <div className="mr-4 relative">
+                          <div
+                            className={`w-4 h-4 rounded-full ${
+                              index === 0 ? "bg-teal-500" : "bg-gray-300"
+                            } flex items-center justify-center`}
+                          >
+                            {index === 0 && <div className="w-2 h-2 rounded-full bg-white"></div>}
                           </div>
+                          {index < trackingResult.events.length - 1 && (
+                            <div className="w-0.5 bg-gray-300 absolute top-4 bottom-0 left-1/2 -translate-x-1/2"></div>
+                          )}
                         </div>
-                        <p className="text-gray-600 mb-1">{event.description}</p>
-                        <p className="text-sm text-gray-500">{event.location}</p>
+                        <div className={`pb-6 ${index === trackingResult.events.length - 1 ? "pb-0" : ""}`}>
+                          <div className="flex flex-col sm:flex-row sm:items-center mb-1">
+                            <p className="font-medium text-gray-900">{event.status}</p>
+                            <div className="sm:ml-4 text-sm text-gray-500">
+                              {event.date} {event.time ? `• ${event.time}` : ''}
+                            </div>
+                          </div>
+                          <p className="text-gray-600 mb-1">{event.description}</p>
+                          <p className="text-sm text-gray-500">{event.location}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-8 text-gray-500">
+                    <Package className="mx-auto h-12 w-12 text-gray-400 mb-3" />
+                    <p>No tracking events available yet.</p>
+                    <p className="text-sm mt-2">Check back later for updates on your shipment.</p>
+                  </div>
+                )}
               </div>
 
               {/* Actions */}
@@ -773,8 +555,8 @@ export default function TrackPage() {
                 <div>
                   <h3 className="font-medium text-lg mb-2">Where to Find Your Tracking Number</h3>
                   <p className="text-gray-600">
-                    Your tracking number can be found in your shipping confirmation email, receipt, or in your Swift
-                    Logistics account dashboard.
+                    Your tracking number can be found in your shipping confirmation email, receipt, or in your account dashboard.
+                    It typically starts with "CRU" followed by numbers.
                   </p>
                 </div>
 
