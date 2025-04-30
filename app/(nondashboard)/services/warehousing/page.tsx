@@ -37,7 +37,7 @@ export default function WarehousingDistributionService() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/4 lg:w-1/5 mb-6 md:mb-0">
-              <h3 className="text-lg font-bold mb-4 text-gray-800">SWIFT LOGISTICS SERVICES</h3>
+              <h3 className="text-lg font-bold mb-4 text-gray-800">ECO GLOBAL DELIVERY SERVICES</h3>
               <ul className="space-y-2">
                 <li className="hover:bg-gray-200 px-4 py-2 rounded transition-colors">
                   <Link href="/services/air-freight" className="block text-gray-700">
@@ -128,7 +128,7 @@ export default function WarehousingDistributionService() {
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics offers state-of-the-art warehousing and distribution solutions designed to optimize 
+                    Eco Global Delivery offers state-of-the-art warehousing and distribution solutions designed to optimize 
                     your supply chain performance. Our strategically located facilities across the globe provide secure 
                     storage, efficient inventory management, and seamless distribution services tailored to your 
                     specific business requirements.
@@ -141,14 +141,14 @@ export default function WarehousingDistributionService() {
                   <p className="text-gray-700 mb-4">
                     Our warehousing facilities are equipped with the latest security systems, inventory management 
                     technologies, and climate-controlled environments to ensure your products are stored in optimal 
-                    conditions. Whether you need short-term storage or long-term warehousing solutions, Swift Logistics 
+                    conditions. Whether you need short-term storage or long-term warehousing solutions, Eco Global Delivery 
                     has the infrastructure and expertise to meet your needs.
                   </p>
                 </div>
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics' comprehensive distribution network allows us to provide timely and reliable delivery 
+                    Eco Global Delivery' comprehensive distribution network allows us to provide timely and reliable delivery 
                     services to any destination worldwide. We handle everything from order processing and picking to 
                     packing, labeling, and final delivery, ensuring a smooth and efficient flow of goods from warehouse 
                     to end customer.
@@ -160,7 +160,7 @@ export default function WarehousingDistributionService() {
                     final delivery.
                   </p>
                   <p className="text-gray-700">
-                    By outsourcing your warehousing and distribution needs to Swift Logistics, you can focus on your 
+                    By outsourcing your warehousing and distribution needs to Eco Global Delivery, you can focus on your 
                     core business activities while we handle the complexities of inventory management, order fulfillment, 
                     and distribution logistics. Our scalable solutions adapt to your changing needs, providing flexibility 
                     and agility in today's dynamic market environment.
@@ -171,7 +171,7 @@ export default function WarehousingDistributionService() {
                   <div>
                     <h3 className="text-xl font-bold mb-4 text-gray-800">Our Warehousing Solutions</h3>
                     <p className="text-gray-700 mb-4">
-                      Swift Logistics offers a wide range of warehousing solutions including general warehousing, 
+                      Eco Global Delivery offers a wide range of warehousing solutions including general warehousing, 
                       bonded warehousing, temperature-controlled storage, hazardous materials storage, and high-security 
                       facilities for valuable goods. Our multi-client warehouses and dedicated facilities are designed 
                       to accommodate diverse product types and storage requirements.
@@ -182,7 +182,7 @@ export default function WarehousingDistributionService() {
                       follow strict quality and safety standards to ensure proper handling of your products at all times.
                     </p>
                     <p className="text-gray-700">
-                      With Swift Logistics' warehousing solutions, you benefit from reduced capital investment in 
+                      With Eco Global Delivery' warehousing solutions, you benefit from reduced capital investment in 
                       facilities and equipment, lower operational costs, flexible storage capacity, and improved 
                       inventory accuracy, all contributing to a more efficient and profitable supply chain.
                     </p>
@@ -204,7 +204,7 @@ export default function WarehousingDistributionService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "Since partnering with Swift Logistics for our warehousing needs, we've experienced a 30% 
+                        "Since partnering with Eco Global Delivery for our warehousing needs, we've experienced a 30% 
                         improvement in order fulfillment speed and a significant reduction in inventory discrepancies. 
                         Their attention to detail and proactive approach has transformed our distribution operations."
                       </p>
@@ -227,7 +227,7 @@ export default function WarehousingDistributionService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "Swift Logistics' distribution services have been a game-changer for our e-commerce business. 
+                        "Eco Global Delivery' distribution services have been a game-changer for our e-commerce business. 
                         Their strategic warehouse locations and efficient order processing have dramatically reduced 
                         our delivery times and improved customer satisfaction scores by 40% within just six months."
                       </p>

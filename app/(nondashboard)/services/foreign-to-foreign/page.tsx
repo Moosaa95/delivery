@@ -37,7 +37,7 @@ export default function ForeignToForeignService() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/4 lg:w-1/5 mb-6 md:mb-0">
-              <h3 className="text-lg font-bold mb-4 text-gray-800">SWIFT LOGISTICS SERVICES</h3>
+              <h3 className="text-lg font-bold mb-4 text-gray-800">ECO GLOBAL DELIVERY SERVICES</h3>
               <ul className="space-y-2">
                 <li className="hover:bg-gray-200 px-4 py-2 rounded transition-colors">
                   <Link href="/services/air-freight" className="block text-gray-700">
@@ -128,7 +128,7 @@ export default function ForeignToForeignService() {
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics specializes in Foreign to Foreign (F2F) transportation services, facilitating the 
+                  Eco Global Delivery specializes in Foreign to Foreign (F2F) transportation services, facilitating the 
                     seamless movement of goods between international locations without entering your home country. 
                     This specialized service addresses the unique challenges and opportunities presented by cross-border 
                     trade between third countries, helping businesses optimize their global supply chains.
@@ -141,7 +141,7 @@ export default function ForeignToForeignService() {
                     customs procedures.
                   </p>
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics leverages our extensive global network spanning 130+ countries to coordinate 
+                  Eco Global Delivery leverages our extensive global network spanning 130+ countries to coordinate 
                     complex Foreign to Foreign shipments with precision and efficiency. Our local expertise in 
                     each region ensures compliance with all relevant regulations while our centralized management 
                     platform provides you with complete visibility and control throughout the entire process.
@@ -156,13 +156,13 @@ export default function ForeignToForeignService() {
                     disruptions and informed decision-making throughout the logistics process.
                   </p>
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics' Foreign to Foreign service includes expert management of all documentation, 
+                  Eco Global Delivery' Foreign to Foreign service includes expert management of all documentation, 
                     customs procedures, and regulatory requirements in both origin and destination countries. Our 
                     teams coordinate effectively across time zones and jurisdictions to ensure smooth operations and 
                     clear communication at every stage of the shipment journey.
                   </p>
                   <p className="text-gray-700">
-                    With Swift Logistics as your Foreign to Foreign partner, you benefit from optimized transportation 
+                    With Eco Global Delivery as your Foreign to Foreign partner, you benefit from optimized transportation 
                     routes, reduced supply chain complexity, decreased inventory carrying costs, and enhanced global 
                     market responsiveness. Our specialized expertise in cross-border logistics enables your business 
                     to expand international operations with confidence and efficiency.
@@ -173,7 +173,7 @@ export default function ForeignToForeignService() {
                   <div>
                     <h3 className="text-xl font-bold mb-4 text-gray-800">Our Foreign to Foreign Solutions</h3>
                     <p className="text-gray-700 mb-4">
-                      Swift Logistics offers comprehensive Foreign to Foreign services across all major transportation 
+                    Eco Global Delivery offers comprehensive Foreign to Foreign services across all major transportation 
                       modes, including air, sea, road, and rail. Our multimodal capabilities enable us to select the 
                       optimal combination of transportation methods based on your specific product requirements, 
                       timeline constraints, and budget considerations.
@@ -208,7 +208,7 @@ export default function ForeignToForeignService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "Swift Logistics' Foreign to Foreign service has transformed our Asian distribution network. 
+                        "Eco Global Delivery' Foreign to Foreign service has transformed our Asian distribution network. 
                         By moving products directly from our factories in China to customers throughout Southeast Asia, 
                         we've reduced transit times by 60% and lowered overall logistics costs by 25%. Their local teams 
                         in each country provide invaluable market knowledge and regulatory expertise."
@@ -233,7 +233,7 @@ export default function ForeignToForeignService() {
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
                         "As a European retailer sourcing products globally and selling across multiple continents, 
-                        Swift Logistics' Foreign to Foreign capability has been a game-changer for our business. 
+                        Eco Global Delivery' Foreign to Foreign capability has been a game-changer for our business. 
                         Their ability to coordinate complex movements between our suppliers and distribution centers 
                         without involving our headquarters has simplified operations and accelerated our market expansion."
                       </p>

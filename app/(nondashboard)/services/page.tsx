@@ -136,7 +136,7 @@ export default function ServicesPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Our Main Services</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Swift Logistics offers a comprehensive range of transportation and logistics services designed to meet all
+            Eco Global Delivery offers a comprehensive range of transportation and logistics services designed to meet all
               your shipping needs, from air and sea freight to specialized logistics solutions.
             </p>
           </div>
@@ -205,7 +205,7 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-purple-900 to-teal-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Ship with Swift Logistics?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Ship with Eco Global Delivery?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Contact our team today to discuss your logistics needs and discover how our services can help your business
             grow.

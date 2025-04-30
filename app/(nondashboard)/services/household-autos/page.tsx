@@ -37,7 +37,7 @@ export default function HouseholdAndAutosService() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/4 lg:w-1/5 mb-6 md:mb-0">
-              <h3 className="text-lg font-bold mb-4 text-gray-800">SWIFT LOGISTICS SERVICES</h3>
+              <h3 className="text-lg font-bold mb-4 text-gray-800">ECO GLOBAL DELIVERY SERVICES</h3>
               <ul className="space-y-2">
                 <li className="hover:bg-gray-200 px-4 py-2 rounded transition-colors">
                   <Link href="/services/air-freight" className="block text-gray-700">
@@ -128,7 +128,7 @@ export default function HouseholdAndAutosService() {
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics specializes in the international relocation of household goods and vehicles, providing 
+                    Eco Global Delivery specializes in the international relocation of household goods and vehicles, providing 
                     comprehensive solutions for individuals, families, and corporate clients making cross-border moves. 
                     Our personalized approach ensures that your personal belongings and vehicles arrive safely at your new 
                     destination, allowing you to focus on the other aspects of your international transition.
@@ -140,7 +140,7 @@ export default function HouseholdAndAutosService() {
                     the utmost care and respect throughout the entire moving process.
                   </p>
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics offers door-to-door service for household goods and vehicles, handling every stage of 
+                    Eco Global Delivery offers door-to-door service for household goods and vehicles, handling every stage of 
                     the relocation process from professional packing at your origin residence to final delivery and 
                     setup at your new home. Our services include custom crating for valuable items, specialized vehicle 
                     transport, secure warehousing, comprehensive insurance coverage, and expert customs clearance.
@@ -155,13 +155,13 @@ export default function HouseholdAndAutosService() {
                     reasons, we tailor our approach to ensure a smooth and stress-free experience.
                   </p>
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics leverages advanced tracking technology to provide real-time visibility into the 
+                    Eco Global Delivery leverages advanced tracking technology to provide real-time visibility into the 
                     status and location of your household goods and vehicles throughout transit. Our customer portal 
                     allows you to monitor your shipment's progress, access important documentation, and communicate 
                     directly with your dedicated move coordinator at any time.
                   </p>
                   <p className="text-gray-700">
-                    With an extensive global network spanning 130+ countries, Swift Logistics has the expertise and 
+                    With an extensive global network spanning 130+ countries, Eco Global Delivery has the expertise and 
                     resources to manage relocations to virtually any destination worldwide. Our local knowledge of 
                     customs regulations, import restrictions, and documentation requirements ensures compliance with 
                     all applicable laws and prevents unexpected delays or complications during your international move.
@@ -172,7 +172,7 @@ export default function HouseholdAndAutosService() {
                   <div>
                     <h3 className="text-xl font-bold mb-4 text-gray-800">Our Household Goods & Autos Solutions</h3>
                     <p className="text-gray-700 mb-4">
-                      Swift Logistics provides comprehensive services for household goods transportation, including 
+                      Eco Global Delivery provides comprehensive services for household goods transportation, including 
                       professional packing and unpacking, custom crating for fragile or high-value items, specialized 
                       handling for artwork and antiques, and secure containerization for ocean transit. Our experienced 
                       packing teams use high-quality materials and proven techniques to ensure maximum protection for 
@@ -208,7 +208,7 @@ export default function HouseholdAndAutosService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "Moving our family from Chicago to Singapore was a daunting prospect, but Swift Logistics made 
+                        "Moving our family from Chicago to Singapore was a daunting prospect, but Eco Global Delivery made 
                         the entire process remarkably smooth. Their attention to detail during packing was impressive—
                         not a single item was damaged. Their guidance through the complex customs process saved us 
                         countless hours and potential headaches. I particularly appreciated their transparent 
@@ -233,7 +233,7 @@ export default function HouseholdAndAutosService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "Swift Logistics handled the shipping of my classic Porsche from Germany to Australia with 
+                        "Eco Global Delivery handled the shipping of my classic Porsche from Germany to Australia with 
                         exceptional care. They arranged specialized containerization and secured all necessary permits 
                         for importing a vintage vehicle. Their knowledge of Australia's strict quarantine and compliance 
                         requirements was invaluable. The car arrived in perfect condition, and their documentation was 
@@ -286,7 +286,7 @@ export default function HouseholdAndAutosService() {
                       <div>
                         <h4 className="text-lg font-bold mb-2 text-gray-800">Global Expertise & Local Knowledge</h4>
                         <p className="text-gray-700">
-                          With operations in 130+ countries, Swift Logistics combines worldwide reach with critical local 
+                          With operations in 130+ countries, Eco Global Delivery combines worldwide reach with critical local 
                           expertise. Our teams understand the unique import regulations, customs procedures, and cultural 
                           considerations of each destination country. This knowledge helps prevent unexpected delays, 
                           additional costs, or compliance issues that often arise during international relocations, 
@@ -300,7 +300,7 @@ export default function HouseholdAndAutosService() {
                       <div>
                         <h4 className="text-lg font-bold mb-2 text-gray-800">Comprehensive End-to-End Solutions</h4>
                         <p className="text-gray-700">
-                          Unlike many relocation providers who outsource critical services, Swift Logistics offers a 
+                          Unlike many relocation providers who outsource critical services, Eco Global Delivery offers a 
                           complete in-house solution for international moves. From initial consultation and survey to 
                           final delivery and setup, we maintain direct control over every aspect of your relocation. 
                           This integrated approach ensures consistent quality standards, seamless coordination between 

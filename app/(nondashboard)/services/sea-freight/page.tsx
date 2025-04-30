@@ -37,7 +37,7 @@ export default function SeaFreightService() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/4 lg:w-1/5 mb-6 md:mb-0">
-              <h3 className="text-lg font-bold mb-4 text-gray-800">SWIFT LOGISTICS SERVICES</h3>
+              <h3 className="text-lg font-bold mb-4 text-gray-800">ECO GLOBAL DELIVERY SERVICES</h3>
               <ul className="space-y-2">
                 <li className="hover:bg-gray-200 px-4 py-2 rounded transition-colors">
                   <Link href="/services/air-freight" className="block text-gray-700">

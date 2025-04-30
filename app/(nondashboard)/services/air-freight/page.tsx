@@ -37,7 +37,7 @@ export default function AirFreightService() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/4 lg:w-1/5 mb-6 md:mb-0">
-              <h3 className="text-lg font-bold mb-4 text-gray-800">SWIFT LOGISTICS SERVICES</h3>
+              <h3 className="text-lg font-bold mb-4 text-gray-800">ECO GLOBAL DELIVERY SERVICES</h3>
               <ul className="space-y-2">
                 <li className="bg-teal-500 text-white px-4 py-2 rounded">
                   <Link href="/services/air-freight" className="block">
@@ -128,7 +128,7 @@ export default function AirFreightService() {
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics has a mission to provide our customers with safe and efficient transportation
+                  Eco Global Delivery has a mission to provide our customers with safe and efficient transportation
                     services around the globe. Our company has proved itself through a steadily strong performance as an
                     air freight forwarder, and is up to use the most modern and forward-thinking solutions.
                   </p>
@@ -139,7 +139,7 @@ export default function AirFreightService() {
                     mission. Being able to satisfy that on a regular basis defines our success.
                   </p>
                   <p className="text-gray-700 mb-4">
-                    Whatever your deadline or destination, Swift Logistics provides fast, reliable and flexible air
+                    Whatever your deadline or destination, Eco Global Delivery provides fast, reliable and flexible air
                     freight solutions. We cover all major airports across the globe and overseas, offering advice on the
                     best routes, quickest transit times and a range of options to suit your timescale requirements and
                     budget. Our staff work closely with reputable air carriers, ensuring you faster and hassle-free
@@ -149,14 +149,14 @@ export default function AirFreightService() {
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics is an international forwarder specialized in air transportation forwarding your
+                  Eco Global Delivery is an international forwarder specialized in air transportation forwarding your
                     shipments destined worldwide. Over the year, our best in class air cargo services has satisfied huge
                     bandwidth of customers. Our well trained and experienced team strives to find the most cost
                     efficient solutions to forward your freight by air.
                   </p>
                   <p className="text-gray-700 mb-4">
                     By using our international network and relations we make sure our clients have the best forwarding
-                    solutions for their cargo. Swift Logistics has been providing time-definite domestic and
+                    solutions for their cargo. Eco Global Delivery has been providing time-definite domestic and
                     international air freight services to satisfied customers. Our internal expertise and relationships
                     with all major air carriers is unparalleled in the marketplace.
                   </p>
@@ -202,7 +202,7 @@ export default function AirFreightService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "Swift Logistics is a game changer! The customer service is unmatched and their ability to
+                        "Eco Global Delivery is a game changer! The customer service is unmatched and their ability to
                         handle the types of chemicals I send their way makes them the best choice for moving hazardous
                         cargo hands down."
                       </p>
@@ -225,7 +225,7 @@ export default function AirFreightService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "Swift Logistics has shown that they are the best company out there to handle my freight. Their
+                        "Eco Global Delivery has shown that they are the best company out there to handle my freight. Their
                         attention to detail and commitment to on-time delivery has made them our exclusive logistics
                         partner."
                       </p>
@@ -263,7 +263,7 @@ export default function AirFreightService() {
                         </h4>
                         <p className="text-gray-700">
                           We organize nearly 132000+ movements per year and have 370 network offices around the globe.
-                          Swift Logistics has more than 21 years of experience in the sphere of international
+                          Eco Global Delivery has more than 21 years of experience in the sphere of international
                           transportation and logistics, which makes us a reliable and competent partner to our
                           customers.
                         </p>
@@ -340,8 +340,7 @@ export default function AirFreightService() {
                       <div className="p-4">
                         <h4 className="font-bold text-lg mb-2">Ocean FCL (Import / Export)</h4>
                         <p className="text-gray-600 text-sm mb-4">
-                          Single point of contact: Shipping internationally can be a complex process. Here at Swift
-                          Logistics, we minimize the complexity by offering a single point of contact.
+                          Single point of contact: Shipping internationally can be a complex process. Here at Eco Global Delivery, we minimize the complexity by offering a single point of contact.
                         </p>
                         <Link
                           href="/services/ocean-fcl"

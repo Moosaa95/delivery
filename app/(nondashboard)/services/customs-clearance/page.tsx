@@ -37,7 +37,7 @@ export default function CustomsClearanceService() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/4 lg:w-1/5 mb-6 md:mb-0">
-              <h3 className="text-lg font-bold mb-4 text-gray-800">SWIFT LOGISTICS SERVICES</h3>
+              <h3 className="text-lg font-bold mb-4 text-gray-800">ECO GLOBAL DELIVERY SERVICES</h3>
               <ul className="space-y-2">
                 <li className="hover:bg-gray-200 px-4 py-2 rounded transition-colors">
                   <Link href="/services/air-freight" className="block text-gray-700">
@@ -128,7 +128,7 @@ export default function CustomsClearanceService() {
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics offers comprehensive customs clearance services to streamline your international trade
+                  Eco Global Delivery offers comprehensive customs clearance services to streamline your international trade
                     operations. Our expert team navigates the complexities of global customs regulations, ensuring your
                     shipments clear customs efficiently and in full compliance with local laws and regulations.
                   </p>
@@ -147,7 +147,7 @@ export default function CustomsClearanceService() {
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics' customs clearance services cover a wide range of shipments including standard commercial
+                  Eco Global Delivery' customs clearance services cover a wide range of shipments including standard commercial
                     goods, hazardous materials, perishable items, and high-value products. Our global network of customs brokers
                     ensures that your cargo moves smoothly through customs checkpoints anywhere in the world.
                   </p>
@@ -168,7 +168,7 @@ export default function CustomsClearanceService() {
                   <div>
                     <h3 className="text-xl font-bold mb-4 text-gray-800">Our Customs Clearance Solutions</h3>
                     <p className="text-gray-700 mb-4">
-                      At Swift Logistics, we offer a comprehensive range of customs clearance services to meet the diverse needs
+                      At Eco Global Delivery, we offer a comprehensive range of customs clearance services to meet the diverse needs
                       of our clients. We handle import and export declarations, duty and tax assessments, classification of goods,
                       and compliance with trade agreements and preferential tariff treatments.
                     </p>
@@ -199,7 +199,7 @@ export default function CustomsClearanceService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "Swift Logistics has transformed our customs clearance process. Their expertise has saved us countless
+                        "Eco Global Delivery has transformed our customs clearance process. Their expertise has saved us countless
                         hours of paperwork and significantly reduced our shipment delays. Their proactive approach to potential
                         compliance issues is invaluable to our business."
                       </p>
@@ -222,7 +222,7 @@ export default function CustomsClearanceService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "After switching to Swift Logistics for our customs clearance needs, we've experienced a dramatic
+                        "After switching to Eco Global Delivery for our customs clearance needs, we've experienced a dramatic
                         improvement in efficiency. Their team's knowledge of international trade regulations has helped us
                         avoid costly penalties and optimize our duty payments."
                       </p>

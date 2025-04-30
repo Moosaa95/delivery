@@ -86,7 +86,7 @@ export default function TrackParcel() {
                 <h3 className="font-medium text-lg">Need Help?</h3>
                 <p className="text-gray-600">
                   If you're having trouble tracking your shipment, please contact our customer service team at (218)
-                  618-7994 or email us at info@crustockglobaldelivery.com.
+                  618-7994 or email us at info@ecoglobaldelivery.com.
                 </p>
               </div>
             </div>

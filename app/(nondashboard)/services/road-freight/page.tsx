@@ -37,7 +37,7 @@ export default function RoadFreightService() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/4 lg:w-1/5 mb-6 md:mb-0">
-              <h3 className="text-lg font-bold mb-4 text-gray-800">SWIFT LOGISTICS SERVICES</h3>
+              <h3 className="text-lg font-bold mb-4 text-gray-800">ECO GLOBAL DELIVERY SERVICES</h3>
               <ul className="space-y-2">
                 <li className="hover:bg-gray-200 px-4 py-2 rounded transition-colors">
                   <Link href="/services/air-freight" className="block text-gray-700">
@@ -128,7 +128,7 @@ export default function RoadFreightService() {
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Eco Global Shipping's Road Freight Service offers flexible and reliable ground transportation 
+                    Eco Global Delivery's Road Freight Service offers flexible and reliable ground transportation 
                     solutions for shipments of all sizes. Whether you need local delivery, cross-border transportation, 
                     or long-haul trucking, our extensive fleet and network of trusted partners ensure your cargo reaches 
                     its destination safely and on time.
@@ -200,7 +200,7 @@ export default function RoadFreightService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "Eco Global Shipping's road freight service has been instrumental in streamlining our distribution 
+                        "Eco Global Delivery's road freight service has been instrumental in streamlining our distribution 
                         network. Their reliable scheduling, careful handling, and proactive communication have significantly 
                         improved our delivery performance."
                       </p>
@@ -223,7 +223,7 @@ export default function RoadFreightService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "We've been using Eco Global Shipping for our cross-border deliveries for three years now. Their road freight team consistently goes above and beyond to ensure our time-sensitive shipments arrive on schedule, even when facing challenging conditions or unexpected obstacles."
+                        "We've been using Eco Global Delivery for our cross-border deliveries for three years now. Their road freight team consistently goes above and beyond to ensure our time-sensitive shipments arrive on schedule, even when facing challenging conditions or unexpected obstacles."
                       </p>
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">

@@ -37,7 +37,7 @@ export default function OceanFCLService() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/4 lg:w-1/5 mb-6 md:mb-0">
-              <h3 className="text-lg font-bold mb-4 text-gray-800">SWIFT LOGISTICS SERVICES</h3>
+              <h3 className="text-lg font-bold mb-4 text-gray-800">ECO GLOBAL DELIVERY SERVICES</h3>
               <ul className="space-y-2">
                 <li className="hover:bg-gray-200 px-4 py-2 rounded transition-colors">
                   <Link href="/services/air-freight" className="block text-gray-700">
@@ -128,7 +128,7 @@ export default function OceanFCLService() {
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics offers comprehensive Ocean Full Container Load (FCL) solutions for importers and exporters 
+                    Eco Global Delivery offers comprehensive Ocean Full Container Load (FCL) solutions for importers and exporters 
                     worldwide. Our FCL service provides dedicated container space for your shipments, ensuring security, 
                     efficiency, and cost-effectiveness for larger cargo volumes. With strategic partnerships with major ocean 
                     carriers, we deliver reliable transit times on all major global trade routes.
@@ -140,7 +140,7 @@ export default function OceanFCLService() {
                     your business demands in today's competitive global marketplace.
                   </p>
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics simplifies the complexities of international container shipping with our end-to-end FCL 
+                    Eco Global Delivery simplifies the complexities of international container shipping with our end-to-end FCL 
                     service offering. From origin pickup and container loading to destination delivery and customs clearance, 
                     our experienced teams manage every aspect of your containerized shipments with precision and care, allowing 
                     you to focus on your core business activities.
@@ -154,7 +154,7 @@ export default function OceanFCLService() {
                     and centralized document management to keep you informed and in control throughout the shipping process.
                   </p>
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics' FCL services include specialized container types to accommodate diverse cargo requirements, 
+                    Eco Global Delivery' FCL services include specialized container types to accommodate diverse cargo requirements, 
                     including standard dry containers, high-cube containers, refrigerated containers, open-top containers, and 
                     flat rack containers. This versatility ensures we can transport virtually any type of cargo safely and 
                     efficiently across global markets.
@@ -171,7 +171,7 @@ export default function OceanFCLService() {
                   <div>
                     <h3 className="text-xl font-bold mb-4 text-gray-800">Our Ocean FCL Solutions</h3>
                     <p className="text-gray-700 mb-4">
-                      Swift Logistics offers tailored FCL solutions to meet diverse shipping needs. Our import services include 
+                      Eco Global Delivery offers tailored FCL solutions to meet diverse shipping needs. Our import services include 
                       origin coordination, carrier booking, documentation management, customs clearance, and final delivery. 
                       For exports, we provide container sourcing, loading supervision, documentation preparation, carrier 
                       coordination, and regulatory compliance assistance.
@@ -206,7 +206,7 @@ export default function OceanFCLService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "Swift Logistics has transformed our import operations with their FCL service. Their proactive approach 
+                        "Eco Global Delivery has transformed our import operations with their FCL service. Their proactive approach 
                         to documentation and customs clearance has reduced our port delays by over 40%. Their tracking system 
                         provides real-time visibility that helps us better plan our production schedules. Their team's responsiveness 
                         and attention to detail make them a valuable extension of our supply chain department."
@@ -231,7 +231,7 @@ export default function OceanFCLService() {
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
                         "As a growing e-commerce retailer, finding reliable FCL service was critical to our expansion into Asian 
-                        markets. Swift Logistics not only secured competitive rates but also provided invaluable guidance on 
+                        markets. Eco Global Delivery not only secured competitive rates but also provided invaluable guidance on 
                         documentation requirements and import regulations. Their container loading supervision at origin ensured 
                         maximum space utilization and cargo protection. Their end-to-end service has simplified what could have 
                         been an overwhelming process."

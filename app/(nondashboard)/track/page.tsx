@@ -56,107 +56,210 @@ export default function TrackPage() {
   const [error, setError] = useState<string | null>(null)
 
   // Function to fetch shipment data from API
+  // const fetchShipmentData = async (trackingNum: string) => {
+  //   setIsLoading(true)
+  //   setError(null)
+    
+  //   try {
+  //     // Fetch shipment data directly with the tracking number
+  //     const response = await fetch(`/api/shipments/${trackingNum}`)
+      
+  //     if (!response.ok) {
+  //       throw new Error(`Error: ${response.status}`)
+  //     }
+      
+  //     const data = await response.json()
+      
+  //     // Check if we found a shipment
+  //     if (!data || !data.id) {
+  //       throw new Error("No shipment found with this tracking number")
+  //     }
+      
+  //     // Parse event dates and times
+  //     const events = data.tracking_events?.map((event: any) => {
+  //       // Parse date and time from the format "Apr 20, 2025 - 06:38 PM"
+  //       const dateTimeParts = event.date.split(' - ')
+  //       const date = dateTimeParts[0]
+  //       const time = dateTimeParts.length > 1 ? dateTimeParts[1] : ''
+        
+  //       // Parse status from description if it contains a colon
+  //       let status = "Update"
+  //       let description = event.description
+        
+  //       if (event.description.includes(': ')) {
+  //         const parts = event.description.split(': ')
+  //         status = parts[0]
+  //         description = parts[1]
+  //       }
+        
+  //       return {
+  //         id: event.id,
+  //         date,
+  //         time,
+  //         location: event.location,
+  //         status,
+  //         description
+  //       }
+  //     }) || []
+      
+  //     // Transform the API data to match the TrackingResult interface
+  //     const formattedResult: TrackingResult = {
+  //       trackingNumber: data.id,
+  //       status: mapStatusToUI(data.status),
+  //       estimatedDelivery: data.estimated_delivery || "Not available",
+  //       service: data.service || "Standard",
+  //       origin: data.origin || "Not specified",
+  //       destination: data.destination || "Not specified",
+  //       events,
+  //       shipmentDetails: {
+  //         trackingNumber: data.id,
+  //         referenceNumber: data.customer || "Not available",
+  //         shippingDate: data.date || formatDate(data.created_at),
+  //         expectedDelivery: data.estimated_delivery || "Not available",
+  //         senderName: data.customer_name || "Not available",
+  //         senderAddress: data.origin_address || "Not available",
+  //         senderEmail: data.customer_email || "Not available",
+  //         senderPhone: data.customer_phone || "Not available",
+  //         shipFrom: data.origin || "Not available",
+  //         receiverName: "Not available", // Not provided in the sample data
+  //         receiverAddress: data.destination_address || "Not available",
+  //         receiverPhone: "Not available", // Not provided in the sample data
+  //         receiverEmail: "Not available", // Not provided in the sample data
+  //         deliveryLocation: data.destination || "Not available",
+  //         shipmentType: data.service || "Package",
+  //         deliveryWeight: `${data.weight || "0"} kg`,
+  //         numberOfPieces: data.dimensions ? `Dimensions: ${data.dimensions}` : "1 Box",
+  //         costOfDelivery: "Not available", // Not provided in the sample data
+  //         packageImage: "/images/package-image.jpg", // Default image
+  //       }
+  //     }
+      
+  //     setTrackingResult(formattedResult)
+  //     setIsSubmitted(true)
+  //   } catch (err) {
+  //     console.error("Error fetching shipment:", err)
+  //     setError(err instanceof Error ? err.message : "Failed to fetch shipment information")
+  //   } finally {
+  //     setIsLoading(false)
+  //   }
+  // }
+
+  // Helper functions for formatting
+  // const formatDate = (dateString?: string) => {
+  //   if (!dateString) return "Not available"
+    
+  //   try {
+  //     const date = new Date(dateString)
+  //     return date.toLocaleDateString('en-US', { 
+  //       month: 'long', 
+  //       day: 'numeric', 
+  //       year: 'numeric' 
+  //     })
+  //   } catch (e) {
+  //     return dateString
+  //   }
+  // }
+
   const fetchShipmentData = async (trackingNum: string) => {
     setIsLoading(true)
     setError(null)
     
     try {
-      // Fetch shipment data directly with the tracking number
       const response = await fetch(`/api/shipments/${trackingNum}`)
-      
-      if (!response.ok) {
-        throw new Error(`Error: ${response.status}`)
-      }
-      
+      if (!response.ok) throw new Error(`Error: ${response.status}`)
       const data = await response.json()
-      
-      // Check if we found a shipment
-      if (!data || !data.id) {
-        throw new Error("No shipment found with this tracking number")
+
+      if (!data?.id) throw new Error("No shipment found")
+
+      // Process events with proper date formatting
+      const processEvents = (events: any[]): TrackingEvent[] => {
+        return events.map(event => {
+          const eventDate = new Date(event.date)
+          const { date, time } = formatDateTime(eventDate)
+          
+          // Extract status from description
+          const descParts = event.description.split(': ')
+          const status = descParts.length > 1 ? descParts[0] : "Update"
+          const description = descParts.length > 1 ? descParts.slice(1).join(': ') : event.description
+
+          return {
+            id: event.id,
+            date,
+            time,
+            location: event.location,
+            status,
+            description
+          }
+        }).reverse() // Show latest event first
       }
-      
-      // Parse event dates and times
-      const events = data.tracking_events?.map((event: any) => {
-        // Parse date and time from the format "Apr 20, 2025 - 06:38 PM"
-        const dateTimeParts = event.date.split(' - ')
-        const date = dateTimeParts[0]
-        const time = dateTimeParts.length > 1 ? dateTimeParts[1] : ''
-        
-        // Parse status from description if it contains a colon
-        let status = "Update"
-        let description = event.description
-        
-        if (event.description.includes(': ')) {
-          const parts = event.description.split(': ')
-          status = parts[0]
-          description = parts[1]
-        }
-        
-        return {
-          id: event.id,
-          date,
-          time,
-          location: event.location,
-          status,
-          description
-        }
-      }) || []
-      
-      // Transform the API data to match the TrackingResult interface
+
+      // Transform backend data to frontend structure
       const formattedResult: TrackingResult = {
         trackingNumber: data.id,
         status: mapStatusToUI(data.status),
-        estimatedDelivery: data.estimated_delivery || "Not available",
-        service: data.service || "Standard",
-        origin: data.origin || "Not specified",
-        destination: data.destination || "Not specified",
-        events,
+        estimatedDelivery: formatDate(data.estimated_delivery) || "Not available",
+        service: data.service,
+        origin: data.origin,
+        destination: data.destination,
+        events: processEvents(data.tracking_events || []),
         shipmentDetails: {
           trackingNumber: data.id,
-          referenceNumber: data.customer || "Not available",
-          shippingDate: data.date || formatDate(data.created_at),
-          expectedDelivery: data.estimated_delivery || "Not available",
-          senderName: data.customer_name || "Not available",
-          senderAddress: data.origin_address || "Not available",
-          senderEmail: data.customer_email || "Not available",
-          senderPhone: data.customer_phone || "Not available",
-          shipFrom: data.origin || "Not available",
-          receiverName: "Not available", // Not provided in the sample data
-          receiverAddress: data.destination_address || "Not available",
-          receiverPhone: "Not available", // Not provided in the sample data
-          receiverEmail: "Not available", // Not provided in the sample data
-          deliveryLocation: data.destination || "Not available",
-          shipmentType: data.service || "Package",
-          deliveryWeight: `${data.weight || "0"} kg`,
-          numberOfPieces: data.dimensions ? `Dimensions: ${data.dimensions}` : "1 Box",
-          costOfDelivery: "Not available", // Not provided in the sample data
-          packageImage: "/images/package-image.jpg", // Default image
+          referenceNumber: data.customer?.id,
+          shippingDate: formatDate(data.date),
+          expectedDelivery: formatDate(data.estimated_delivery),
+          senderName: data.customer?.name,
+          senderAddress: data.origin_address,
+          senderEmail: data.customer?.email,
+          senderPhone: data.customer?.phone,
+          shipFrom: data.origin,
+          receiverName: "Not available", // Not in backend response
+          receiverAddress: data.destination_address,
+          receiverPhone: data.destination_phone_number, // Not in backend response
+          receiverEmail: data.destination_email, // Not in backend response
+          deliveryLocation: data.destination,
+          shipmentType: data.service,
+          deliveryWeight: `${data.weight} kg`,
+          numberOfPieces: data.dimensions || "1 Box",
+          costOfDelivery: "Not available", // Not in backend response
+          packageImage: "/images/package-image.jpg"
         }
       }
-      
+
       setTrackingResult(formattedResult)
       setIsSubmitted(true)
     } catch (err) {
-      console.error("Error fetching shipment:", err)
-      setError(err instanceof Error ? err.message : "Failed to fetch shipment information")
+      setError(err instanceof Error ? err.message : "Fetch error")
     } finally {
       setIsLoading(false)
     }
   }
 
-  // Helper functions for formatting
-  const formatDate = (dateString?: string) => {
-    if (!dateString) return "Not available"
-    
+  // New unified date/time formatter
+  const formatDateTime = (date: Date) => ({
+    date: date.toLocaleDateString('en-US', { 
+      month: 'short', 
+      day: 'numeric', 
+      year: 'numeric' 
+    }),
+    time: date.toLocaleTimeString('en-US', { 
+      hour: 'numeric', 
+      minute: '2-digit',
+      hour12: true 
+    })
+  })
+
+  // Simplified date formatter
+  const formatDate = (isoString?: string) => {
+    if (!isoString) return "Not available"
     try {
-      const date = new Date(dateString)
+      const date = new Date(isoString)
       return date.toLocaleDateString('en-US', { 
         month: 'long', 
         day: 'numeric', 
         year: 'numeric' 
       })
-    } catch (e) {
-      return dateString
+    } catch {
+      return "Invalid date"
     }
   }
 

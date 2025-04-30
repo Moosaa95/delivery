@@ -26,7 +26,7 @@ export default function Header() {
     { name: "Warehousing & Distribution Service", href: "/services/warehousing" },
     { name: "Customs Clearance Service", href: "/services/customs-clearance" },
     { name: "Cargo Insurance Services", href: "/services/cargo-insurance" },
-    { name: "Swift Logistics Service", href: "/services/swift-logistics" },
+    // { name: "Swift Logistics Service", href: "/services/swift-logistics" },
   ]
 
   const otherServices = [
@@ -42,7 +42,7 @@ export default function Header() {
   return (
     <header className="w-full">
       {/* Top Bar */}
-      <div className="bg-gray-900 text-white py-2">
+      {/* <div className="bg-gray-900 text-white py-2">
         <div className="container mx-auto px-4 flex flex-wrap justify-between items-center">
           <div className="flex items-center space-x-4">
             <div className="flex items-center gap-1">
@@ -73,19 +73,19 @@ export default function Header() {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Navigation */}
-      <div className="bg-white shadow-md">
+      <div className="bg-white shadow-md max-h-[150px]">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
-            <Link href="/" className="flex items-center">
+          <div className="flex justify-between items-center py-2">
+            <Link href="/" className="flex">
               <Image
-                src="/images/swift-logo.png"
-                alt="Swift Logistics"
-                width={180}
-                height={50}
-                className="h-12 w-auto"
+                src="/eco-global-three.png"
+                alt="Eco Global Delivery"
+                width={250}
+                height={100}
+                className=""
               />
             </Link>
 
@@ -175,21 +175,21 @@ export default function Header() {
                     Contact
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="/quote"
                     className="ml-2 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-md font-medium transition-colors"
                   >
                     Get a Quote
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </nav>
           </div>
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <nav className="md:hidden py-4 border-t border-gray-200">
+            <nav className="md:hidden py-2  border-t border-gray-200">
               <ul className="space-y-2">
                 <li>
                   <Link
@@ -273,7 +273,7 @@ export default function Header() {
                     Contact
                   </Link>
                 </li>
-                <li className="pt-2">
+                {/* <li className="pt-2">
                   <Link
                     href="/quote"
                     className="block bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-md font-medium transition-colors text-center"
@@ -281,7 +281,7 @@ export default function Header() {
                   >
                     Get a Quote
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </nav>
           )}

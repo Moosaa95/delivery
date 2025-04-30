@@ -37,7 +37,7 @@ export default function BulkLiquidLogisticsService() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/4 lg:w-1/5 mb-6 md:mb-0">
-              <h3 className="text-lg font-bold mb-4 text-gray-800">SWIFT LOGISTICS SERVICES</h3>
+              <h3 className="text-lg font-bold mb-4 text-gray-800">ECO GLOBAL DELIVERY SERVICES</h3>
               <ul className="space-y-2">
                 <li className="hover:bg-gray-200 px-4 py-2 rounded transition-colors">
                   <Link href="/services/air-freight" className="block text-gray-700">
@@ -128,7 +128,7 @@ export default function BulkLiquidLogisticsService() {
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics offers specialized bulk liquid transportation solutions designed to meet the unique 
+                  Eco Global Delivery offers specialized bulk liquid transportation solutions designed to meet the unique 
                     requirements of the chemical, food, pharmaceutical, and petroleum industries. With our extensive 
                     expertise in handling liquid cargo, we provide safe, compliant, and efficient logistics services for 
                     a wide range of products from non-hazardous food-grade liquids to complex chemical compounds.
@@ -140,7 +140,7 @@ export default function BulkLiquidLogisticsService() {
                     partnerships to deliver customized solutions that ensure product integrity throughout transit.
                   </p>
                   <p className="text-gray-700 mb-4">
-                    Understanding the critical nature of bulk liquid transportation, Swift Logistics implements 
+                    Understanding the critical nature of bulk liquid transportation, Eco Global Delivery implements 
                     rigorous safety protocols and quality control measures at every stage of the logistics process. 
                     Our team of highly trained professionals has extensive experience handling sensitive and 
                     hazardous liquid products, ensuring your cargo reaches its destination safely and on schedule.
@@ -149,7 +149,7 @@ export default function BulkLiquidLogisticsService() {
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics maintains a diverse fleet of specialized equipment for bulk liquid transportation, 
+                  Eco Global Delivery maintains a diverse fleet of specialized equipment for bulk liquid transportation, 
                     including ISO tank containers, flexitanks, road tankers, and specialized bulk vessels. This variety 
                     allows us to select the optimal equipment configuration for your specific product requirements, 
                     volume considerations, and destination constraints.
@@ -161,7 +161,7 @@ export default function BulkLiquidLogisticsService() {
                     issues that may arise during transit.
                   </p>
                   <p className="text-gray-700">
-                    With Swift Logistics as your bulk liquid logistics partner, you benefit from our industry-specific 
+                    With Eco Global Delivery as your bulk liquid logistics partner, you benefit from our industry-specific 
                     knowledge, global capabilities, and unwavering commitment to operational excellence. We understand 
                     the complexities involved in transporting liquid cargo and deliver solutions that balance safety, 
                     compliance, efficiency, and cost-effectiveness.
@@ -172,7 +172,7 @@ export default function BulkLiquidLogisticsService() {
                   <div>
                     <h3 className="text-xl font-bold mb-4 text-gray-800">Our Bulk Liquid Solutions</h3>
                     <p className="text-gray-700 mb-4">
-                      Swift Logistics offers a comprehensive range of bulk liquid transportation options, including 
+                    Eco Global Delivery offers a comprehensive range of bulk liquid transportation options, including 
                       ISO tank containers for hazardous and high-value liquids, flexitanks for non-hazardous products, 
                       and specialized IBC solutions for smaller volume requirements. Each solution is selected based on 
                       your specific product characteristics, volume needs, and destination requirements.
@@ -206,7 +206,7 @@ export default function BulkLiquidLogisticsService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "Swift Logistics has transformed our chemical transportation operations. Their expertise 
+                        "Eco Global Delivery has transformed our chemical transportation operations. Their expertise 
                         in handling our sensitive products and navigating complex regulations has eliminated shipping 
                         delays and ensured consistent product quality upon arrival. Their team's responsiveness and 
                         attention to detail make them an invaluable partner."
@@ -231,7 +231,7 @@ export default function BulkLiquidLogisticsService() {
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
                         "As a food oil manufacturer, maintaining product integrity is critical to our business. 
-                        Swift Logistics' flexitank solutions and temperature monitoring capabilities have significantly 
+                        Eco Global Delivery' flexitank solutions and temperature monitoring capabilities have significantly 
                         reduced contamination risks and improved our export operations. Their global network has also 
                         opened new markets for our products."
                       </p>

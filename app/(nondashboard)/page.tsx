@@ -28,7 +28,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/track-parcel"
+                href="/track"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-full font-medium transition-all flex items-center gap-2 text-lg"
               >
                 <Package className="w-5 h-5" />
@@ -331,10 +331,10 @@ export default function Home() {
                 <div>
                   <h3 className="text-xl font-bold mb-3 text-cyan-300">We can choose the best solution for you!</h3>
                   <p className="text-gray-300">
-                    We organize nearly 132000+ movements per year and have 370 network offices around the globe. Eco
-                    Global Shipping Company International has more than 21 years of experience in the sphere of
-                    international transportation and logistics, which makes us a reliable and competent partner to our
-                    customers.
+                  With over 15 years of experience, we manage complex supply chains across six continents through 
+                  our network covering major ports in the Middle East, Europe, and North America. Our Charleston hub 
+                  serves as the nerve center for optimizing global operations, handling specialized cargo via sea, air, 
+                  and land transportation.
                   </p>
                 </div>
               </div>
@@ -342,11 +342,12 @@ export default function Home() {
               <div className="flex">
                 <div className="text-7xl font-bold text-gray-700 mr-6">2</div>
                 <div>
-                  <h3 className="text-xl font-bold mb-3 text-cyan-300">We put people first!</h3>
+                  <h3 className="text-xl font-bold mb-3 text-cyan-300">Customer-Centric Solutions</h3>
                   <p className="text-gray-300">
-                    We build strong, ethical and long-term partnerships with our customers and carriers. Our
-                    professionals are well trained and knowledgeable, ready to meet customers needs and answer their
-                    questions. It is our belief that the working process should be easy, flexible, and transparent.
+                  Our skilled teams combine decades of freight management experience with a relentless focus on 
+                  client satisfaction. We maintain flexible approaches to supply chain management, offering 
+                  personalized service through 370+ network offices worldwide and JIT delivery solutions for 
+                  time-sensitive shipments.
                   </p>
                 </div>
               </div>
@@ -354,12 +355,12 @@ export default function Home() {
               <div className="flex">
                 <div className="text-7xl font-bold text-gray-700 mr-6">3</div>
                 <div>
-                  <h3 className="text-xl font-bold mb-3 text-cyan-300">Our focus is on innovation!</h3>
+                  <h3 className="text-xl font-bold mb-3 text-cyan-300">Innovative Supply Chain Management</h3>
                   <p className="text-gray-300">
-                    We believe that the services, offered by our company, should satisfy the high expectations of our
-                    customers. We are dedicated in creating added value for our customers by implementing modern
-                    technology and avant-garde know-how in our work. That is why the desire of constant improvement is
-                    the driving force behind our transportation business.
+                  We implement cutting-edge logistics technology to deliver smart, end-to-end solutions. From 
+                  real-time cargo tracking to customized clearance procedures, our systems ensure transparent 
+                  operations and continuous improvement. This tech-driven approach helps maintain our position as 
+                  preferred partners for Fortune 500 companies and emerging markets alike.
                   </p>
                 </div>
               </div>

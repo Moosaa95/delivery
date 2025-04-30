@@ -9,10 +9,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="mb-6">
-              <Image src="/images/crustock-logo-white.png" alt="Crustock Global Delivery" width={200} height={60} />
+              <Image
+                              src="/eco-global-three.png"
+                              alt="Eco Global Delivery"
+                              width={150}
+                              height={250}
+                              className=""
+                            />
             </div>
             <p className="text-gray-400 mb-6">
-              Crustock Global Delivery provides innovative shipping and logistics solutions for businesses and
+              Eco Global Delivery provides innovative shipping and logistics solutions for businesses and
               individuals worldwide. With our global network and advanced technology, we ensure your packages arrive
               safely and on time.
             </p>
@@ -117,10 +123,10 @@ export default function Footer() {
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-3 text-cyan-400 flex-shrink-0" />
                 <a
-                  href="mailto:info@crustockglobaldelivery.com"
+                  href="mailto:info@ecoglobaldelivery.com"
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
-                  info@crustockglobaldelivery.com
+                  info@ecoglobaldelivery.com
                 </a>
               </li>
               <li className="flex items-center">
@@ -129,36 +135,14 @@ export default function Footer() {
               </li>
             </ul>
 
-            <div className="mt-6">
-              <h4 className="font-bold mb-3">Useful Documentation</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="/documents/shipping-guidelines"
-                    className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2" />
-                    Shipping Guidelines
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/documents/customs-forms"
-                    className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2" />
-                    Customs Forms
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            
           </div>
         </div>
 
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} Crustock Global Delivery. All rights reserved.
+              © {new Date().getFullYear()} Eco Global Delivery. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-4 text-sm text-gray-500">
               <Link href="/terms" className="hover:text-cyan-400 transition-colors">

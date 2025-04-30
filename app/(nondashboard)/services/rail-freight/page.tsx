@@ -37,7 +37,7 @@ export default function RailFreightService() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/4 lg:w-1/5 mb-6 md:mb-0">
-              <h3 className="text-lg font-bold mb-4 text-gray-800">SWIFT LOGISTICS SERVICES</h3>
+              <h3 className="text-lg font-bold mb-4 text-gray-800">ECO GLOBAL DELIVERY SERVICES</h3>
               <ul className="space-y-2">
                 <li className="hover:bg-gray-200 px-4 py-2 rounded transition-colors">
                   <Link href="/services/air-freight" className="block text-gray-700">
@@ -128,7 +128,7 @@ export default function RailFreightService() {
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Eco Global Shipping's Rail Freight Service offers an efficient, reliable, and environmentally 
+                    Eco Global Delivery's Rail Freight Service offers an efficient, reliable, and environmentally 
                     friendly transportation solution for moving large volumes of cargo over long distances. Our 
                     comprehensive rail network connects major economic centers and integrates seamlessly with other 
                     transportation modes to provide complete logistics solutions.
@@ -201,7 +201,7 @@ export default function RailFreightService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "Switching to Eco Global Shipping's rail freight service has significantly reduced our 
+                        "Switching to Eco Global Delivery's rail freight service has significantly reduced our 
                         transportation costs and environmental footprint. Their expertise in coordinating complex 
                         rail shipments has been invaluable to our supply chain operations."
                       </p>
@@ -224,7 +224,7 @@ export default function RailFreightService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "We've been impressed by Eco Global Shipping's ability to handle our large-volume rail 
+                        "We've been impressed by Eco Global Delivery's ability to handle our large-volume rail 
                         shipments with consistent reliability. Their proactive approach to problem-solving and 
                         excellent communication have made them a trusted partner in our logistics network."
                       </p>

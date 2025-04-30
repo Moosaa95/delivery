@@ -128,7 +128,7 @@ return (
 
               <div className="mb-8">
                 <p className="text-gray-700 mb-4">
-                  Multimodal transport is the seamless integration of two or more modes of transportation to move goods from origin to destination. Swift Logistics specializes in creating efficient multimodal solutions that combine the strengths of air, sea, rail, and road transport to optimize your supply chain.
+                  Multimodal transport is the seamless integration of two or more modes of transportation to move goods from origin to destination. Eco Global Delivery specializes in creating efficient multimodal solutions that combine the strengths of air, sea, rail, and road transport to optimize your supply chain.
                 </p>
                 <p className="text-gray-700 mb-4">
                   Our multimodal transport service offers a comprehensive door-to-door solution that handles every aspect of your shipment's journey. By strategically combining different transport modes, we can reduce costs, minimize transit times, and lower the environmental impact of your logistics operations.
@@ -155,7 +155,7 @@ return (
                 <div>
                   <h3 className="text-xl font-bold mb-4 text-gray-800">Our Multimodal Expertise</h3>
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics has developed extensive expertise in designing and executing multimodal transport solutions across diverse industries and geographies. Our global network of partners and agents ensures seamless coordination at every transfer point.
+                    Eco Global Delivery has developed extensive expertise in designing and executing multimodal transport solutions across diverse industries and geographies. Our global network of partners and agents ensures seamless coordination at every transfer point.
                   </p>
                   <p className="text-gray-700 mb-4">
                     We specialize in complex multimodal routes that might include sea-air combinations for time-sensitive shipments, rail-road solutions for inland destinations, or comprehensive door-to-door services that utilize multiple transport modes to optimize efficiency.
@@ -181,7 +181,7 @@ return (
                   <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                     <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                     <p className="text-gray-700 italic mb-4 relative z-10">
-                      "Swift Logistics' multimodal solution cut our shipping costs by 22% while reducing transit time by nearly a week. Their ability to seamlessly coordinate between ocean and rail transport has transformed our supply chain efficiency."
+                      "Eco Global Delivery' multimodal solution cut our shipping costs by 22% while reducing transit time by nearly a week. Their ability to seamlessly coordinate between ocean and rail transport has transformed our supply chain efficiency."
                     </p>
                     <div className="flex items-center">
                       <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -202,7 +202,7 @@ return (
                   <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                     <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                     <p className="text-gray-700 italic mb-4 relative z-10">
-                      "When our usual shipping route was disrupted by severe weather, Swift Logistics quickly rerouted our shipment using their multimodal network. Their flexibility and problem-solving approach ensured we met our delivery deadlines despite the challenges."
+                      "When our usual shipping route was disrupted by severe weather, Eco Global Delivery quickly rerouted our shipment using their multimodal network. Their flexibility and problem-solving approach ensured we met our delivery deadlines despite the challenges."
                     </p>
                     <div className="flex items-center">
                       <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -226,7 +226,7 @@ return (
               {/* Why Choose Us */}
               <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 mb-8">
                 <h3 className="text-xl font-bold mb-6 text-gray-800">
-                  Why Choose Swift Logistics for Multimodal Transport:
+                  Why Choose Eco Global Delivery for Multimodal Transport:
                 </h3>
 
                 <div className="space-y-6">

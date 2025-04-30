@@ -37,7 +37,7 @@ export default function CustomsComplianceService() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/4 lg:w-1/5 mb-6 md:mb-0">
-              <h3 className="text-lg font-bold mb-4 text-gray-800">SWIFT LOGISTICS SERVICES</h3>
+              <h3 className="text-lg font-bold mb-4 text-gray-800">ECO GLOBAL DELIVERY SERVICES</h3>
               <ul className="space-y-2">
                 <li className="hover:bg-gray-200 px-4 py-2 rounded transition-colors">
                   <Link href="/services/air-freight" className="block text-gray-700">
@@ -128,7 +128,7 @@ export default function CustomsComplianceService() {
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics provides comprehensive customs compliance services designed to navigate the 
+                  Eco Global Delivery provides comprehensive customs compliance services designed to navigate the 
                     complexities of international trade regulations. Our team of certified customs specialists and 
                     global trade experts ensures your shipments meet all regulatory requirements across borders, 
                     minimizing delays and avoiding costly penalties.
@@ -155,13 +155,13 @@ export default function CustomsComplianceService() {
                     implement effective mitigation strategies.
                   </p>
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics' customized compliance solutions are tailored to your specific industry requirements, 
+                  Eco Global Delivery' customized compliance solutions are tailored to your specific industry requirements, 
                     product characteristics, and global footprint. Whether you're dealing with restricted goods, 
                     controlled substances, or specialized products, we develop compliance protocols that address your 
                     unique needs while ensuring full regulatory adherence.
                   </p>
                   <p className="text-gray-700">
-                    With Swift Logistics as your customs compliance partner, you benefit from reduced compliance risks, 
+                    With Eco Global Delivery as your customs compliance partner, you benefit from reduced compliance risks, 
                     optimized duty and tax liabilities, accelerated customs clearance, and enhanced supply chain 
                     visibility. Our commitment to compliance excellence supports your business growth while protecting 
                     your reputation in the global marketplace.
@@ -172,7 +172,7 @@ export default function CustomsComplianceService() {
                   <div>
                     <h3 className="text-xl font-bold mb-4 text-gray-800">Our Customs Compliance Solutions</h3>
                     <p className="text-gray-700 mb-4">
-                      Swift Logistics offers a comprehensive range of customs compliance services, including tariff 
+                    Eco Global Delivery offers a comprehensive range of customs compliance services, including tariff 
                       classification, valuation analysis, country of origin determination, and special trade program 
                       qualification. Our solutions ensure accurate declarations and full compliance with all applicable 
                       regulations, reducing the risk of delays, fines, and penalties.
@@ -207,7 +207,7 @@ export default function CustomsComplianceService() {
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
-                        "Swift Logistics' customs compliance team has been instrumental in streamlining our global 
+                        "Eco Global Delivery' customs compliance team has been instrumental in streamlining our global 
                         operations. Their proactive approach to regulatory changes and attention to detail has virtually 
                         eliminated customs delays and saved us thousands in potential penalties. They truly function as 
                         an extension of our international team."
@@ -232,7 +232,7 @@ export default function CustomsComplianceService() {
                       <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                       <p className="text-gray-700 italic mb-4 relative z-10">
                         "As a pharmaceutical company, we face complex regulatory requirements for our international 
-                        shipments. Swift Logistics provides expert guidance that ensures our products move smoothly 
+                        shipments. Eco Global Delivery provides expert guidance that ensures our products move smoothly 
                         across borders while maintaining full compliance with all applicable regulations. Their 
                         knowledge of controlled substance requirements is particularly valuable to our business."
                       </p>

@@ -10,7 +10,7 @@ export default function ContactUs() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/contact-us-banner.jpg"
-            alt="Contact Swift Logistics"
+            alt="Contact Eco Global Delivery"
             fill
             className="object-cover brightness-50"
             priority
@@ -70,7 +70,7 @@ export default function ContactUs() {
                   <div className="flex">
                     <div className="w-24 font-medium">Email:</div>
                     <div className="text-teal-600 hover:text-teal-700">
-                      <a href="mailto:dubai@swiftlogistics.com">dubai@swiftlogistics.com</a>
+                      <a href="mailto:dubai@ecoglobaldelivery.com">dubai@ecoglobaldelivery.com</a>
                     </div>
                   </div>
                   
@@ -114,7 +114,7 @@ export default function ContactUs() {
                   <div className="flex">
                     <div className="w-24 font-medium">Email:</div>
                     <div className="text-teal-600 hover:text-teal-700">
-                      <a href="mailto:info@swiftlogistics.com">info@swiftlogistics.com</a>
+                      <a href="mailto:info@ecoglobaldelivery.com">info@ecoglobaldelivery.com</a>
                     </div>
                   </div>
                   
@@ -271,7 +271,7 @@ export default function ContactUs() {
               <div className="bg-gray-50 rounded-lg p-6 border border-gray-100">
                 <h3 className="text-lg font-bold text-gray-800 mb-2">Do you have representatives in other countries?</h3>
                 <p className="text-gray-700">
-                  Yes, Swift Logistics maintains a global network of partners and representatives across major trade 
+                  Yes, Eco Global Delivery maintains a global network of partners and representatives across major trade 
                   lanes worldwide. In addition to our main offices in Kazakhstan and Dubai, we have a network of trusted 
                   agents who can provide local support in most major markets.
                 </p>
@@ -280,7 +280,7 @@ export default function ContactUs() {
               <div className="bg-gray-50 rounded-lg p-6 border border-gray-100">
                 <h3 className="text-lg font-bold text-gray-800 mb-2">How can I track my shipment?</h3>
                 <p className="text-gray-700">
-                  Swift Logistics provides real-time shipment tracking through our online client portal. Once your 
+                Eco Global Delivery provides real-time shipment tracking through our online client portal. Once your 
                   shipment is booked, you'll receive login credentials to access our tracking platform. Alternatively, 
                   you can contact your assigned account manager for status updates on your shipments.
                 </p>
@@ -296,7 +296,7 @@ export default function ContactUs() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Optimize Your Supply Chain?</h2>
             <p className="text-lg mb-8 opacity-90">
-              Contact our logistics experts today to discuss how Swift Logistics can enhance your global transportation operations.
+              Contact our logistics experts today to discuss how Eco Global Delivery can enhance your global transportation operations.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link

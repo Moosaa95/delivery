@@ -10,7 +10,7 @@ export default function AboutUs() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/truck.jpg"
-            alt="About Swift Logistics"
+            alt="About Eco Global"
             fill
             className="object-cover brightness-50"
             priority
@@ -35,19 +35,19 @@ export default function AboutUs() {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-gray-800">Our Company History</h2>
               <p className="text-gray-700 mb-4">
-                Swift Logistics & Delivery Company was commissioned in 2008 as an emerging organization designed to cater to the growing demands in the field of logistics. Since our incorporation, we have extended our operations and established branches both within and outside the country, developing an international presence.
+                Eco Global Delivery Company was commissioned in 2008 as an emerging organization designed to cater to the growing demands in the field of logistics. Since our incorporation, we have extended our operations and established branches both within and outside the country, developing an international presence.
               </p>
               <p className="text-gray-700 mb-4">
                 Today, we stand as one of the leading logistics companies in the U.A.E, Kazakhstan, and Qatar, with a wide network covering all major ports in the Middle East, Europe, and North America. Our major logistics hub is located in Charleston, South Carolina, where we begin the process of optimizing and customizing supply chain solutions across our global network spanning six continents.
               </p>
               <p className="text-gray-700">
-                To streamline our worldwide operations, we collaborate with global networks that provide highly equipped professional logistics services. The Swift Logistics officials, with decades of experience, enjoy a good reputation as Sea/Air freight forwarders, Charters & General Agents in the Middle East with branch offices located throughout North America.
+                To streamline our worldwide operations, we collaborate with global networks that provide highly equipped professional logistics services. The Eco Global Delivery officials, with decades of experience, enjoy a good reputation as Sea/Air freight forwarders, Charters & General Agents in the Middle East with branch offices located throughout North America.
               </p>
             </div>
             <div className="relative h-64 md:h-96 rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="/images/freight-man.jpg"
-                alt="Swift Logistics History"
+                alt="Eco Global Delivery History"
                 fill
                 className="object-cover"
               />
@@ -183,7 +183,7 @@ export default function AboutUs() {
           {/* Why Choose Us */}
           <div className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-gray-800">Why Choose Swift Logistics</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gray-800">Why Choose Eco Global Delivery</h2>
               <div className="w-24 h-1 bg-teal-500 mx-auto"></div>
             </div>
             
@@ -242,7 +242,7 @@ export default function AboutUs() {
           <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 shadow-sm">
             <h2 className="text-2xl font-bold mb-6 text-gray-800">Our Global Presence</h2>
             <p className="text-gray-700 mb-6">
-              Swift Logistics & Delivery Company operates across multiple continents with strategic locations designed to serve our global clients efficiently. Our presence includes:
+              Eco Global Delivery Company operates across multiple continents with strategic locations designed to serve our global clients efficiently. Our presence includes:
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -286,7 +286,7 @@ export default function AboutUs() {
             <div className="bg-white p-8 rounded-lg border border-gray-100 shadow-sm relative">
               <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
               <p className="text-gray-700 italic mb-6 relative z-10">
-                "Swift Logistics has been our trusted partner for over 5 years. Their attention to detail, competitive rates, and exceptional customer service have made them our preferred logistics partner for all international shipments."
+                "Eco Global Delivery has been our trusted partner for over 5 years. Their attention to detail, competitive rates, and exceptional customer service have made them our preferred logistics partner for all international shipments."
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -308,7 +308,7 @@ export default function AboutUs() {
             <div className="bg-white p-8 rounded-lg border border-gray-100 shadow-sm relative">
               <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
               <p className="text-gray-700 italic mb-6 relative z-10">
-                "The team at Swift Logistics has transformed our supply chain operations. Their global network and expertise in customs procedures have eliminated delays and reduced costs significantly. A true partner in our business growth."
+                "The team at Eco Global Delivery has transformed our supply chain operations. Their global network and expertise in customs procedures have eliminated delays and reduced costs significantly. A true partner in our business growth."
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -330,7 +330,7 @@ export default function AboutUs() {
             <div className="bg-white p-8 rounded-lg border border-gray-100 shadow-sm relative">
               <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
               <p className="text-gray-700 italic mb-6 relative z-10">
-                "Working with Swift Logistics has given us peace of mind. Their transparent communication, proactive problem-solving, and reliable service have made them an invaluable extension of our team."
+                "Working with Eco Global Delivery has given us peace of mind. Their transparent communication, proactive problem-solving, and reliable service have made them an invaluable extension of our team."
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -357,7 +357,7 @@ export default function AboutUs() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Optimize Your Supply Chain?</h2>
           <p className="max-w-2xl mx-auto mb-8 text-lg">
-            Contact our team today to discuss how Swift Logistics can streamline your logistics operations and provide customized solutions for your specific needs.
+            Contact our team today to discuss how Eco Global Delivery can streamline your logistics operations and provide customized solutions for your specific needs.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 

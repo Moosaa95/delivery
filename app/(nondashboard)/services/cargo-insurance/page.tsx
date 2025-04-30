@@ -37,7 +37,7 @@ export default function CargoInsuranceService() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/4 lg:w-1/5 mb-6 md:mb-0">
-              <h3 className="text-lg font-bold mb-4 text-gray-800">SWIFT LOGISTICS SERVICES</h3>
+              <h3 className="text-lg font-bold mb-4 text-gray-800">ECO GLOBAL DELIVERY SERVICES</h3>
               <ul className="space-y-2">
                 <li className="hover:bg-gray-200 px-4 py-2 rounded transition-colors">
                   <Link href="/services/air-freight" className="block text-gray-700">
@@ -128,7 +128,7 @@ export default function CargoInsuranceService() {
 
                 <div className="mb-8">
                   <p className="text-gray-700 mb-4">
-                    Swift Logistics provides comprehensive cargo insurance solutions designed to protect your valuable shipments against loss, damage, or theft during transportation. In today's global shipping environment, having proper insurance coverage is not just an option—it's a necessity for businesses that want to mitigate risk and ensure peace of mind.
+                  Eco Global Delivery provides comprehensive cargo insurance solutions designed to protect your valuable shipments against loss, damage, or theft during transportation. In today's global shipping environment, having proper insurance coverage is not just an option—it's a necessity for businesses that want to mitigate risk and ensure peace of mind.
                   </p>
                   <p className="text-gray-700 mb-4">
                     Our cargo insurance services offer protection beyond the limited liability coverage provided by carriers. While most shipping contracts include basic liability, these often cover only a fraction of your cargo's actual value, leaving you exposed to significant financial risk in case of unforeseen events.
@@ -144,7 +144,7 @@ export default function CargoInsuranceService() {
                     Many shippers mistakenly believe that carrier liability is sufficient protection for their goods. However, standard carrier liability typically only covers a small portion of the actual value—often as little as $500 per shipping unit. Additionally, carriers are not liable for losses resulting from "acts of God" such as natural disasters, or other circumstances beyond their control.
                   </p>
                   <p className="text-gray-700 mb-4">
-                    With Swift Logistics cargo insurance, you can secure coverage for the full commercial invoice value of your goods, plus freight and other costs (up to 110% of value). This ensures that in the event of loss or damage, you won't be left bearing the financial burden.
+                    With Eco Global Delivery cargo insurance, you can secure coverage for the full commercial invoice value of your goods, plus freight and other costs (up to 110% of value). This ensures that in the event of loss or damage, you won't be left bearing the financial burden.
                   </p>
                   <p className="text-gray-700">
                     Our insurance solutions are designed to provide broad coverage, rapid claims processing, and expert assistance throughout the claims process, allowing you to focus on your core business with confidence that your shipments are properly protected.
@@ -155,7 +155,7 @@ export default function CargoInsuranceService() {
                   <div>
                     <h3 className="text-xl font-bold mb-4 text-gray-800">Insurance Coverage Options</h3>
                     <p className="text-gray-700 mb-4">
-                      At Swift Logistics, we understand that different cargo types and shipping routes come with varying levels of risk. That's why we offer several insurance coverage options to match your specific needs:
+                      At Eco Global Delivery, we understand that different cargo types and shipping routes come with varying levels of risk. That's why we offer several insurance coverage options to match your specific needs:
                     </p>
                     <ul className="list-disc pl-5 mb-4 text-gray-700 space-y-2">
                       <li><strong>All-Risk Coverage:</strong> Comprehensive protection against all risks of physical loss or damage from any external cause</li>
@@ -302,7 +302,7 @@ export default function CargoInsuranceService() {
                   <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 relative">
                     <div className="text-teal-500 text-4xl absolute top-4 left-4 opacity-20">"</div>
                     <p className="text-gray-700 italic mb-4 relative z-10">
-                      "When a container of our specialized medical equipment was damaged during a storm at sea, I was deeply concerned about the financial impact. But Swift Logistics' cargo insurance coverage and claims team were exceptional. They processed our claim efficiently and we received full compensation within three weeks. Their insurance service has become an essential part of our logistics strategy."
+                      "When a container of our specialized medical equipment was damaged during a storm at sea, I was deeply concerned about the financial impact. But Eco Global Delivery' cargo insurance coverage and claims team were exceptional. They processed our claim efficiently and we received full compensation within three weeks. Their insurance service has become an essential part of our logistics strategy."
                     </p>
                     <div className="flex items-center">
                       <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
