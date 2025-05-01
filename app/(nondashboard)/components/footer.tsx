@@ -109,16 +109,14 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 mr-3 text-cyan-400 flex-shrink-0 mt-0.5" />
                 <span className="text-gray-400">
-                  123 Logistics Avenue
-                  <br />
-                  Suite 500
-                  <br />
-                  New York, NY 10001
+                Global City 134th accounting quarter,<br />
+                      867 1/A, Kazybek Bi district,<br />
+                      Karaganda, Kazakhstan
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 text-cyan-400 flex-shrink-0" />
-                <span className="text-gray-400">(218) 618-7994</span>
+                <span className="text-gray-400">+7 778 527 6027</span>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-3 text-cyan-400 flex-shrink-0" />

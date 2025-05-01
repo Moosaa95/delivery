@@ -299,12 +299,12 @@ export default function ContactUs() {
               Contact our logistics experts today to discuss how Eco Global Delivery can enhance your global transportation operations.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
+              {/* <Link
                 href="/request-quote"
                 className="bg-white text-teal-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-md transition-colors duration-200 flex items-center justify-center"
               >
                 Request a Quote <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+              </Link> */}
               <Link
                 href="/services"
                 className="bg-transparent hover:bg-teal-700 border-2 border-white font-medium py-3 px-8 rounded-md transition-colors duration-200 flex items-center justify-center"

@@ -212,7 +212,7 @@ export default function TrackPage() {
           senderEmail: data.customer?.email,
           senderPhone: data.customer?.phone,
           shipFrom: data.origin,
-          receiverName: "Not available", // Not in backend response
+          receiverName: data.destination_name, // Not in backend response
           receiverAddress: data.destination_address,
           receiverPhone: data.destination_phone_number, // Not in backend response
           receiverEmail: data.destination_email, // Not in backend response
@@ -221,7 +221,7 @@ export default function TrackPage() {
           deliveryWeight: `${data.weight} kg`,
           numberOfPieces: data.dimensions || "1 Box",
           costOfDelivery: "Not available", // Not in backend response
-          packageImage: "/images/package-image.jpg"
+          packageImage: data.image
         }
       }
 
@@ -347,6 +347,25 @@ export default function TrackPage() {
 
   return (
     <main className="min-h-screen py-12 bg-gray-50 text-black">
+      <section className="relative h-96 flex items-center">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/track.jpeg" // Update with your image path
+            alt="Global shipping network"
+            fill
+            className="object-cover object-center brightness-75"
+            priority
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
+            Track Your Shipment
+          </h1>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
+            Real-time tracking for your global shipments
+          </p>
+        </div>
+      </section>
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">Track Your Shipment</h1>
@@ -409,11 +428,15 @@ export default function TrackPage() {
           )}
 
           {isSubmitted && trackingResult && (
-            <div className="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+            <div id="printable-area" className="bg-white rounded-xl shadow-md overflow-hidden mb-8">
               {/* Tracking Header */}
+              <div className="print-header">
+                <h2 className="text-2xl font-bold mb-2">Shipment Tracking Report</h2>
+                <p className="text-gray-600">Generated: {new Date().toLocaleDateString()}</p>
+              </div>
               <div className="bg-gradient-to-r from-purple-600 to-teal-500 p-6 text-white">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-                  <div>
+                  <div id="print-section">
                     <h2 className="text-2xl font-bold mb-2">Tracking Summary</h2>
                     <p className="text-white/80">Service: {trackingResult.service}</p>
                   </div>
@@ -438,39 +461,39 @@ export default function TrackPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   {/* Left Column - Sender Information */}
                   <div className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
+                    <div className="grid grid-cols-2 gap-4" id="print-grid">
+                      <div id="print-details">
                         <p className="text-sm text-gray-500">Tracking Number:</p>
                         <p className="font-medium">{trackingResult.shipmentDetails.trackingNumber}</p>
                       </div>
-                      <div>
+                      <div id="print-details">
                         <p className="text-sm text-gray-500">Reference Number:</p>
                         <p className="font-medium">{trackingResult.shipmentDetails.referenceNumber}</p>
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
+                    <div className="grid grid-cols-2 gap-4" id="print-grid">
+                      <div id="print-details">
                         <p className="text-sm text-gray-500">Shipping Date:</p>
                         <p className="font-medium">{trackingResult.shipmentDetails.shippingDate}</p>
                       </div>
-                      <div>
+                      <div id="print-details">
                         <p className="text-sm text-gray-500">Expected Delivery Date:</p>
                         <p className="font-medium">{trackingResult.shipmentDetails.expectedDelivery}</p>
                       </div>
                     </div>
 
-                    <div>
+                    <div id="print-details">
                       <p className="text-sm text-gray-500">Sender's Name:</p>
                       <p className="font-medium">{trackingResult.shipmentDetails.senderName}</p>
                     </div>
 
-                    <div>
+                    <div id="print-details">
                       <p className="text-sm text-gray-500">Ship From:</p>
                       <p className="font-medium">{trackingResult.shipmentDetails.shipFrom}</p>
                     </div>
 
-                    <div>
+                    <div id="print-details">
                       <p className="text-sm text-gray-500">Sender's Address:</p>
                       <p className="font-medium">{trackingResult.shipmentDetails.senderAddress}</p>
                     </div>
@@ -538,17 +561,18 @@ export default function TrackPage() {
 
                 {/* Package Images */}
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="relative h-64 rounded-lg overflow-hidden border border-gray-200">
-                    <Image
+                  <div className="relative h-64 flex justify-center rounded-lg overflow-hidden border bg-transparent border-gray-200">
+                    {/* <Image
                       src="/images/tracking-illustration.jpg"
                       alt="Tracking service illustration"
                       fill
                       className="object-cover"
-                    />
+                    /> */}
+                    <img src="/global-gif.gif" className="object-cover" />
                   </div>
                   <div className="relative h-64 rounded-lg overflow-hidden border border-gray-200">
                     <Image 
-                      src={trackingResult.shipmentDetails.packageImage || "/images/package-image.jpg"} 
+                      src={`${trackingResult.shipmentDetails.packageImage}` || "/images/package-image.jpg"} 
                       alt="Your package" 
                       fill 
                       className="object-cover" 
@@ -561,7 +585,7 @@ export default function TrackPage() {
               </div>
 
               {/* Tracking Timeline */}
-              <div className="p-6 border-b border-gray-200">
+              <div className="p-6 border-b border-gray-200" id="print-section">
                 <h3 className="text-lg font-bold mb-6">Shipment Progress</h3>
                 {trackingResult.events && trackingResult.events.length > 0 ? (
                   <div className="space-y-6">
@@ -611,28 +635,6 @@ export default function TrackPage() {
                     <Phone className="w-4 h-4 mr-2" />
                     Contact Support
                   </Link>
-                  <button
-                    onClick={() => window.print()}
-                    className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors flex items-center"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="w-4 h-4 mr-2"
-                    >
-                      <polyline points="6 9 6 2 18 2 18 9"></polyline>
-                      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-                      <rect x="6" y="14" width="12" height="8"></rect>
-                    </svg>
-                    Print Details
-                  </button>
                   <button className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors flex items-center">
                     <Mail className="w-4 h-4 mr-2" />
                     Email Updates
