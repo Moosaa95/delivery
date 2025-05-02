@@ -211,7 +211,7 @@ export default function WarehousingDistributionService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-5.jpg"
+                            src="/jennifer.jpg"
                             alt="Jennifer K."
                             width={48}
                             height={48}
@@ -234,7 +234,7 @@ export default function WarehousingDistributionService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-6.jpg"
+                            src="/marcus.jpg"
                             alt="Marcus T."
                             width={48}
                             height={48}

@@ -208,7 +208,7 @@ export default function RailFreightService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-1.jpg"
+                            src="/richard.jpg"
                             alt="Richard H."
                             width={48}
                             height={48}
@@ -231,7 +231,7 @@ export default function RailFreightService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-2.jpg"
+                            src="/patricia.jpg"
                             alt="Patricia K."
                             width={48}
                             height={48}

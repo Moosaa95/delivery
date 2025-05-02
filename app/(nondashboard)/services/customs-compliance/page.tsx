@@ -215,7 +215,7 @@ export default function CustomsComplianceService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-3.jpg"
+                            src="/sarah.jpg"
                             alt="Sarah J."
                             width={48}
                             height={48}
@@ -239,7 +239,7 @@ export default function CustomsComplianceService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-5.jpg"
+                            src="/michael.jpg"
                             alt="Michael R."
                             width={48}
                             height={48}

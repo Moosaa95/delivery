@@ -216,7 +216,7 @@ export default function RollOnRollOffService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-7.jpg"
+                            src="/robert.jpg"
                             alt="Robert K."
                             width={48}
                             height={48}
@@ -241,7 +241,7 @@ export default function RollOnRollOffService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-8.jpg"
+                            src="/sophia.jpg"
                             alt="Sophia L."
                             width={48}
                             height={48}

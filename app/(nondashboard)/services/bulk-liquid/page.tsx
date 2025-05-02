@@ -214,7 +214,7 @@ export default function BulkLiquidLogisticsService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-7.jpg"
+                            src="/robert.jpg"
                             alt="Robert M."
                             width={48}
                             height={48}
@@ -238,7 +238,7 @@ export default function BulkLiquidLogisticsService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-8.jpg"
+                            src="/amelia.jpg"
                             alt="Amelia P."
                             width={48}
                             height={48}

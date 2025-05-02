@@ -209,7 +209,7 @@ export default function AirFreightService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-1.jpg"
+                            src="/vic.jpg"
                             alt="Vic B."
                             width={48}
                             height={48}
@@ -232,7 +232,7 @@ export default function AirFreightService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-2.jpg"
+                            src="/deborah.jpg"
                             alt="Deborah C."
                             width={48}
                             height={48}
@@ -307,7 +307,7 @@ export default function AirFreightService() {
                     <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                       <div className="relative h-48">
                         <Image
-                          src="/images/roll-on-roll-off.jpg"
+                          src="/images/roll-on-roll-off-banner.jpg"
                           alt="Roll On Roll Off"
                           fill
                           className="object-cover"

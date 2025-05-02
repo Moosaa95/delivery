@@ -277,7 +277,7 @@ export default function Home() {
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                   <Image
-                    src="/images/testimonial-1.jpg"
+                    src="/vic.jpg"
                     alt="Vic B."
                     width={48}
                     height={48}
@@ -300,7 +300,7 @@ export default function Home() {
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                   <Image
-                    src="/images/testimonial-2.jpg"
+                    src="/deborah.jpg"
                     alt="Deborah C."
                     width={48}
                     height={48}

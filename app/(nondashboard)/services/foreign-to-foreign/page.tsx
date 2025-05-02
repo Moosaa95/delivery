@@ -216,7 +216,7 @@ export default function ForeignToForeignService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-4.jpg"
+                            src="/david.jpg"
                             alt="David L."
                             width={48}
                             height={48}
@@ -240,7 +240,7 @@ export default function ForeignToForeignService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-6.jpg"
+                            src="/elena.jpg"
                             alt="Elena S."
                             width={48}
                             height={48}

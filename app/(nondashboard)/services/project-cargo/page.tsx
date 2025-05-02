@@ -221,7 +221,7 @@ export default function ProjectCargoService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-5.jpg"
+                            src="/david.jpg"
                             alt="David C."
                             width={48}
                             height={48}
@@ -246,7 +246,7 @@ export default function ProjectCargoService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-6.jpg"
+                            src="/elena.jpg"
                             alt="Elena M."
                             width={48}
                             height={48}

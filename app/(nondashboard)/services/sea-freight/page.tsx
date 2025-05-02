@@ -205,7 +205,7 @@ export default function SeaFreightService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-3.jpg"
+                            src="/marcus.jpg"
                             alt="Marcus L."
                             width={48}
                             height={48}
@@ -228,7 +228,7 @@ export default function SeaFreightService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-1.jpg"
+                            src="/jennifer.jpg"
                             alt="Jennifer K."
                             width={48}
                             height={48}

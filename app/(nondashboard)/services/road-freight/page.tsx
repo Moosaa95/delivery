@@ -207,7 +207,7 @@ export default function RoadFreightService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-2.jpg"
+                            src="/thomas.jpg"
                             alt="Thomas R."
                             width={48}
                             height={48}
@@ -228,7 +228,7 @@ export default function RoadFreightService() {
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                           <Image
-                            src="/images/testimonial-3.jpg"
+                            src="/laura.jpg"
                             alt="Laura M."
                             width={48}
                             height={48}
