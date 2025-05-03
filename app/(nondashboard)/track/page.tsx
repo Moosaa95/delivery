@@ -561,25 +561,19 @@ export default function TrackPage() {
 
                 {/* Package Images */}
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="relative h-64 flex justify-center rounded-lg overflow-hidden border bg-transparent border-gray-200">
-                    {/* <Image
-                      src="/images/tracking-illustration.jpg"
-                      alt="Tracking service illustration"
-                      fill
-                      className="object-cover"
-                    /> */}
-                    <img src="/global-gif.gif" className="object-cover" />
+                <div className="relative w-full h-80 rounded-lg overflow-hidden border border-gray-200">
+                  <Image 
+                    src={trackingResult.shipmentDetails.packageImage || "/images/package-image.jpg"} 
+                    alt="Your package" 
+                    layout="fill"  // Fills the parent container
+                    className="object-fill"  // Ensures the image covers the full area but might crop
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                    <p className="text-white font-medium">Package Visualization</p>
                   </div>
-                  <div className="relative h-64 rounded-lg overflow-hidden border border-gray-200">
-                    <Image 
-                      src={`${trackingResult.shipmentDetails.packageImage}` || "/images/package-image.jpg"} 
-                      alt="Your package" 
-                      fill 
-                      className="object-cover" 
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                      <p className="text-white font-medium">Package Visualization</p>
-                    </div>
+                </div>
+                  <div className="relative h-64 flex justify-center rounded-lg overflow-hidden border bg-transparent border-gray-200">
+                    <img src="/global-gif.gif" className="object-cover" />
                   </div>
                 </div>
               </div>
