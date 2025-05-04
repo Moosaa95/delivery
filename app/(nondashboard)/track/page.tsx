@@ -167,6 +167,7 @@ export default function TrackPage() {
     
     try {
       const response = await fetch(`/api/shipments/${trackingNum}`)
+      console.log("RESPONSE", response)
       if (!response.ok) throw new Error(`Error: ${response.status}`)
       const data = await response.json()
 
@@ -422,7 +423,7 @@ export default function TrackPage() {
                 </div>
                 <div className="ml-3">
                   <h3 className="text-sm font-medium">Error tracking shipment</h3>
-                  <p className="mt-2 text-sm">{error}</p>
+                  <p className="mt-2 text-sm">Please try again</p>
                 </div>
               </div>
             </div>
