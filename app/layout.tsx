@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import TawkMenuHider from "./tawk";
 // import { AuthProvider } from "./context/auth-context";
 // import TawkWidget from "./tawk";
 // import TawkToChat from "./tawk";
@@ -28,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <script
+      {/* <script
         type="text/javascript"
         dangerouslySetInnerHTML={{
           __html: `
@@ -44,6 +45,12 @@ export default function RootLayout({
             
             // Custom script to hide the menu button
             document.addEventListener('DOMContentLoaded', function() {
+              console.log("TESTING")
+              const tawkFrame = document.getElementById('tawkIframe');
+              console.log(tawkFrame, 'hey test')
+              if (tawkFrame) {
+                tawkFrame.contentWindow.document.querySelector('.tawk-powered').remove();
+              }
               function hideMenuButton() {
                 // Look for the menu button based on its attributes
                 const menuButtons = document.querySelectorAll('button.tawk-header-text[data-text="Menu"]');
@@ -79,12 +86,13 @@ export default function RootLayout({
             });
           `,
         }}
-      />
+      /> */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* <AuthProvider> */}
         {children}
+        <TawkMenuHider />
         {/* <TawkWidget /> */}
         {/* </AuthProvider> */}
       </body>

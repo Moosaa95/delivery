@@ -119,42 +119,5 @@
   body {
     @apply bg-background text-foreground;
   }
-  button.tawk-header-text[data-v-70fc860f] {
-    @apply border-2 border-red-500
-  }
-}
-
-
-button.tawk-header-text[data-v-70fc860f] {
-  display: none !important;
-}
-
-[data-v-70fc860f].tawk-header-text {
-  display: none !important;
-}
-
-i.tawk-icon-menu[data-v-70fc860f] {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-
-/* Hide main menu container */
-div.tawk-flex-none[role="navigation"][data-v-70fc860f] {
-  display: none !important;
-}
-
-/* Hide dropdown menu */
-div.tawk-dropdown-menu.tawk-open {
-  display: none !important;
-}
-
-/* Hide tooltips */
-span.tawk-tooltip-hover {
-  display: none !important;
-}
-
-.tawk-button {
-  display: none !important;
 }
 

@@ -125,7 +125,55 @@
 //   );
 // }
 
-export default function TawkToChat() {  
-  return (
-    <h1>Hey takws</h1>
-  )}
+// export default function TawkToChat() {  
+//   return (
+//     <h1>Hey takws</h1>
+//   )}
+
+'use client'
+import { useEffect } from 'react';
+
+const TawkMenuHider = () => {
+  useEffect(() => {
+    // Initialize Tawk.to with custom configuration
+    const script = document.createElement('script');
+    script.innerHTML = `
+      var Tawk_API = Tawk_API || {};
+      Tawk_API.onLoad = function() {
+        // Official method to hide header elements
+        Tawk_API.setAttributes({
+          hideHeader: true
+        });
+
+        // CSS override for persistent hiding
+        const style = document.createElement('style');
+        style.innerHTML = '
+          .tawk-header, 
+          .tawk-toolbar-menu, 
+          [data-text="Menu"] { 
+            display: none !important; 
+          }
+        ';
+        document.head.appendChild(style);
+      };
+    `;
+    
+    // Load Tawk.to script
+    const tawkScript = document.createElement('script');
+    tawkScript.src = 'https://embed.tawk.to/6810cbc909ac26190b4a9f3c/1iq0po3qm';
+    tawkScript.async = true;
+    tawkScript.charset = 'UTF-8';
+    tawkScript.crossOrigin = '*';
+    
+    document.body.append(script, tawkScript);
+
+    return () => {
+      document.body.removeChild(script);
+      document.body.removeChild(tawkScript);
+    };
+  }, []);
+
+  return null;
+};
+
+export default TawkMenuHider;
