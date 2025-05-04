@@ -9,7 +9,7 @@ export default function ContactUs() {
       <section className="relative h-[300px] md:h-[400px] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/contact-us-banner.jpg"
+            src="/contact.jpg"
             alt="Contact Eco Global Delivery"
             fill
             className="object-cover brightness-50"
