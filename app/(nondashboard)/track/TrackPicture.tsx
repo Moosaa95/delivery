@@ -22,11 +22,11 @@ export default function PackageVisualization({
       <div className="flex flex-col md:flex-row space-x-4">
         {/* Package Image Section */}
         <div className="relative md:w-1/2 bg-white">
-            <div className="aspect-[3/4] md:aspect-[3/4] h-[500px] md:h-[600px] w-full relative">
+            <div className="aspect-[3/4]  h-[500px] md:h-[800px] w-full relative">
                 {/* <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 to-white/30 z-0" />     */}
 
                 <div className="relative h-full w-full flex items-center justify-center bg-transparent p-6 z-10">
-                    <div className="relative w-full h-full max-w-[400px]">
+                    <div className="relative w-full h-full ">
                         <Image
                         src={packageImage || "/placeholder.svg"}
                         alt="Your package"
@@ -47,7 +47,7 @@ export default function PackageVisualization({
 
 
         {/* Global Tracking Animation */}
-        <div className="relative md:w-1/2 h-[400px] md:h-[550px] mt-[20px] bg-black">
+        <div className="relative md:w-1/2 h-[400px] md:h-[750px] mt-[20px] bg-black">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/5 to-indigo-900/5 z-0" />
           <div className="relative h-full w-full flex items-center justify-center p-6 z-10">
             <div className="relative w-full h-full max-w-[400px] flex items-center justify-center">

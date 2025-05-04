@@ -368,11 +368,11 @@ export default function TrackPage() {
           </p>
         </div>
       </section>
-      <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+      <div className="px-4">
+        <div className="mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">Track Your Shipment</h1>
 
-          <div className="bg-white rounded-xl shadow-md p-6 mb-8">
+          <div className="container mx-auto bg-white rounded-xl shadow-md p-6 mb-8">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="tracking" className="block text-sm font-medium text-gray-700 mb-1">
@@ -430,7 +430,7 @@ export default function TrackPage() {
           )}
 
           {isSubmitted && trackingResult && (
-            <div id="printable-area" className="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+            <div id="printable-area" className="bg-white rounded-xl shadow-md overflow-hidden mb-8 mx-4">
               {/* Tracking Header */}
               <div className="print-header">
                 <h2 className="text-2xl font-bold mb-2">Shipment Tracking Report</h2>
