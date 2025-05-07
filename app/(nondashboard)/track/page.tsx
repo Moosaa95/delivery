@@ -496,7 +496,7 @@ export default function TrackPage() {
                     </div>
 
                     <div id="print-details">
-                      <p className="text-sm text-gray-500">Sender's Address:</p>
+                      <p className="text-sm text-gray-500">Originated's Address:</p>
                       <p className="font-medium">{trackingResult.shipmentDetails.senderAddress}</p>
                     </div>
 
