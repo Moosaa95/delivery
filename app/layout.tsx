@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="en">
       <script 
         src="https://delivery-bjl2.onrender.com/static/chat/chat-widget.js" 
-        data-base-url="https://delivery-bjl2.onrender.com/static/chat/chat-widget.js" 
+        data-base-url="https://delivery-bjl2.onrender.com" 
         defer>
       </script>
             
