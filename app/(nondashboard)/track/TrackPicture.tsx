@@ -9,7 +9,7 @@ interface PackageVisualizationProps {
 
 export default function PackageVisualization({
   packageImage = "/images/package-image.jpg",
-  animationGif = "/global-two.gif",
+  animationGif = "/global-gif-unscreen.gif",
   packageLabel = "Package Visualization",
 }: PackageVisualizationProps) {
   return (
@@ -32,7 +32,7 @@ export default function PackageVisualization({
                         alt="Your package"
                         quality={100}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                         style={{ mixBlendMode: "multiply" }}
                         priority
                         />
@@ -43,14 +43,14 @@ export default function PackageVisualization({
                 <p className="text-white text-center font-medium">{packageLabel}</p>
                 </div>
             </div>
-        </div>
+          </div>
 
 
         {/* Global Tracking Animation */}
-        <div className="relative md:w-1/2 h-[400px] md:h-[750px] mt-[20px] bg-black">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/5 to-indigo-900/5 z-0" />
-          <div className="relative h-full w-full flex items-center justify-center p-6 z-10">
-            <div className="relative w-full h-full max-w-[400px] flex items-center justify-center">
+        <div className="relative md:w-1/2 bg-white">
+          {/* <div className="absolute inset-0 bg-gradient-to-br from-blue-900/5 to-indigo-900/5 z-0" /> */}
+          <div className="aspect-[3/4]  h-[500px] md:h-[800px] w-full relative">
+            <div className="relative h-full w-full flex items-center justify-center bg-transparent p-6 z-10">
               <Image
                 src={animationGif || "/placeholder.svg"}
                 alt="Global tracking visualization"
