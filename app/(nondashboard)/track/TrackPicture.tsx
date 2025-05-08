@@ -32,7 +32,7 @@ export default function PackageVisualization({
                         alt="Your package"
                         quality={100}
                         fill
-                        className="object-contain"
+                        className="object-cover"
                         style={{ mixBlendMode: "multiply" }}
                         priority
                         />
