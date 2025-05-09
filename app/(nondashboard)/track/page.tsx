@@ -5,7 +5,8 @@ import { Search, Package, Truck, CheckCircle, AlertCircle, Clock, Info, Phone, M
 import Link from "next/link"
 import Image from "next/image"
 import PackageVisualization from "./TrackPicture"
-import {toZonedTime , format } from 'date-fns-tz'
+// import {toZonedTime , format } from 'date-fns-tz'
+import { format, parseISO } from 'date-fns'
 
 // Define interfaces for the tracking data
 interface TrackingEvent {
@@ -57,110 +58,6 @@ export default function TrackPage() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  // Function to fetch shipment data from API
-  // const fetchShipmentData = async (trackingNum: string) => {
-  //   setIsLoading(true)
-  //   setError(null)
-    
-  //   try {
-  //     // Fetch shipment data directly with the tracking number
-  //     const response = await fetch(`/api/shipments/${trackingNum}`)
-      
-  //     if (!response.ok) {
-  //       throw new Error(`Error: ${response.status}`)
-  //     }
-      
-  //     const data = await response.json()
-      
-  //     // Check if we found a shipment
-  //     if (!data || !data.id) {
-  //       throw new Error("No shipment found with this tracking number")
-  //     }
-      
-  //     // Parse event dates and times
-  //     const events = data.tracking_events?.map((event: any) => {
-  //       // Parse date and time from the format "Apr 20, 2025 - 06:38 PM"
-  //       const dateTimeParts = event.date.split(' - ')
-  //       const date = dateTimeParts[0]
-  //       const time = dateTimeParts.length > 1 ? dateTimeParts[1] : ''
-        
-  //       // Parse status from description if it contains a colon
-  //       let status = "Update"
-  //       let description = event.description
-        
-  //       if (event.description.includes(': ')) {
-  //         const parts = event.description.split(': ')
-  //         status = parts[0]
-  //         description = parts[1]
-  //       }
-        
-  //       return {
-  //         id: event.id,
-  //         date,
-  //         time,
-  //         location: event.location,
-  //         status,
-  //         description
-  //       }
-  //     }) || []
-      
-  //     // Transform the API data to match the TrackingResult interface
-  //     const formattedResult: TrackingResult = {
-  //       trackingNumber: data.id,
-  //       status: mapStatusToUI(data.status),
-  //       estimatedDelivery: data.estimated_delivery || "Not available",
-  //       service: data.service || "Standard",
-  //       origin: data.origin || "Not specified",
-  //       destination: data.destination || "Not specified",
-  //       events,
-  //       shipmentDetails: {
-  //         trackingNumber: data.id,
-  //         referenceNumber: data.customer || "Not available",
-  //         shippingDate: data.date || formatDate(data.created_at),
-  //         expectedDelivery: data.estimated_delivery || "Not available",
-  //         senderName: data.customer_name || "Not available",
-  //         senderAddress: data.origin_address || "Not available",
-  //         senderEmail: data.customer_email || "Not available",
-  //         senderPhone: data.customer_phone || "Not available",
-  //         shipFrom: data.origin || "Not available",
-  //         receiverName: "Not available", // Not provided in the sample data
-  //         receiverAddress: data.destination_address || "Not available",
-  //         receiverPhone: "Not available", // Not provided in the sample data
-  //         receiverEmail: "Not available", // Not provided in the sample data
-  //         deliveryLocation: data.destination || "Not available",
-  //         shipmentType: data.service || "Package",
-  //         deliveryWeight: `${data.weight || "0"} kg`,
-  //         numberOfPieces: data.dimensions ? `Dimensions: ${data.dimensions}` : "1 Box",
-  //         costOfDelivery: "Not available", // Not provided in the sample data
-  //         packageImage: "/images/package-image.jpg", // Default image
-  //       }
-  //     }
-      
-  //     setTrackingResult(formattedResult)
-  //     setIsSubmitted(true)
-  //   } catch (err) {
-  //     console.error("Error fetching shipment:", err)
-  //     setError(err instanceof Error ? err.message : "Failed to fetch shipment information")
-  //   } finally {
-  //     setIsLoading(false)
-  //   }
-  // }
-
-  // Helper functions for formatting
-  // const formatDate = (dateString?: string) => {
-  //   if (!dateString) return "Not available"
-    
-  //   try {
-  //     const date = new Date(dateString)
-  //     return date.toLocaleDateString('en-US', { 
-  //       month: 'long', 
-  //       day: 'numeric', 
-  //       year: 'numeric' 
-  //     })
-  //   } catch (e) {
-  //     return dateString
-  //   }
-  // }
 
   const fetchShipmentData = async (trackingNum: string) => {
     setIsLoading(true)
@@ -200,7 +97,7 @@ export default function TrackPage() {
       const formattedResult: TrackingResult = {
         trackingNumber: data.id,
         status: mapStatusToUI(data.status),
-        estimatedDelivery: formatDate(data.estimated_delivery) || "Not available",
+        estimatedDelivery:  format(parseISO(data.estimated_delivery), 'MMMM d') ||  "Not available",
         service: data.service,
         origin: data.origin,
         destination: data.destination,
@@ -208,8 +105,8 @@ export default function TrackPage() {
         shipmentDetails: {
           trackingNumber: data.id,
           referenceNumber: data.customer?.id,
-          shippingDate: formatDate(data.date),
-          expectedDelivery: formatDate(data.estimated_delivery),
+          shippingDate: format(parseISO(data.date), "MMMM d, yyyy") || "Not Available",
+          expectedDelivery: format(parseISO(data.estimated_delivery), "MMMM d, yyyy") || "Not Available",
           senderName: data.customer?.name,
           senderAddress: data.origin_address,
           senderEmail: data.customer?.email,
@@ -265,30 +162,6 @@ export default function TrackPage() {
       return "Invalid date"
     }
   }
-  // const formatDate = (isoString?: string, timeZone = 'America/New_York') => {
-  //   if (!isoString) return "Not available"
-  //   try {
-  //     const utcDate = new Date(isoString)
-  //     const zonedDate = toZonedTime(utcDate, timeZone)
-  //     return format(zonedDate, 'MMMM d, yyyy', { timeZone })
-  //   } catch {
-  //     return "Invalid date"
-  //   }
-  // }
-  
-  // const formatDateTime = (isoString?: string | Date, timeZone = 'America/New_York') => {
-  //   if (!isoString) return { date: "Not available", time: "Not available" }
-  //   try {
-  //     const utcDate = new Date(isoString)
-  //     const zonedDate = toZonedTime(utcDate, timeZone)
-  //     return {
-  //       date: format(zonedDate, 'MMM d, yyyy', { timeZone }),
-  //       time: format(zonedDate, 'hh:mm a', { timeZone }),
-  //     }
-  //   } catch {
-  //     return { date: "Invalid", time: "Invalid" }
-  //   }
-  // }
 
   const formatTime = (dateString?: string) => {
     if (!dateString) return "Not available"
