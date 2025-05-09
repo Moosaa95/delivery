@@ -5,6 +5,7 @@ import { Search, Package, Truck, CheckCircle, AlertCircle, Clock, Info, Phone, M
 import Link from "next/link"
 import Image from "next/image"
 import PackageVisualization from "./TrackPicture"
+import {toZonedTime , format } from 'date-fns-tz'
 
 // Define interfaces for the tracking data
 interface TrackingEvent {
@@ -237,31 +238,55 @@ export default function TrackPage() {
   }
 
   // New unified date/time formatter
-  const formatDateTime = (date: Date) => ({
-    date: date.toLocaleDateString('en-US', { 
-      month: 'short', 
-      day: 'numeric', 
-      year: 'numeric' 
-    }),
-    time: date.toLocaleTimeString('en-US', { 
-      hour: 'numeric', 
-      minute: '2-digit',
-      hour12: true 
-    })
-  })
+  // const formatDateTime = (date: Date) => ({
+  //   date: date.toLocaleDateString('en-US', { 
+  //     month: 'short', 
+  //     day: 'numeric', 
+  //     year: 'numeric' 
+  //   }),
+  //   time: date.toLocaleTimeString('en-US', { 
+  //     hour: 'numeric', 
+  //     minute: '2-digit',
+  //     hour12: true 
+  //   })
+  // })
 
-  // Simplified date formatter
-  const formatDate = (isoString?: string) => {
+  // // Simplified date formatter
+  // const formatDate = (isoString?: string) => {
+  //   if (!isoString) return "Not available"
+  //   try {
+  //     const date = new Date(isoString)
+  //     return date.toLocaleDateString('en-US', { 
+  //       month: 'long', 
+  //       day: 'numeric', 
+  //       year: 'numeric' 
+  //     })
+  //   } catch {
+  //     return "Invalid date"
+  //   }
+  // }
+  const formatDate = (isoString?: string, timeZone = 'America/New_York') => {
     if (!isoString) return "Not available"
     try {
-      const date = new Date(isoString)
-      return date.toLocaleDateString('en-US', { 
-        month: 'long', 
-        day: 'numeric', 
-        year: 'numeric' 
-      })
+      const utcDate = new Date(isoString)
+      const zonedDate = toZonedTime(utcDate, timeZone)
+      return format(zonedDate, 'MMMM d, yyyy', { timeZone })
     } catch {
       return "Invalid date"
+    }
+  }
+  
+  const formatDateTime = (isoString?: string, timeZone = 'America/New_York') => {
+    if (!isoString) return { date: "Not available", time: "Not available" }
+    try {
+      const utcDate = new Date(isoString)
+      const zonedDate = toZonedTime(utcDate, timeZone)
+      return {
+        date: format(zonedDate, 'MMM d, yyyy', { timeZone }),
+        time: format(zonedDate, 'hh:mm a', { timeZone }),
+      }
+    } catch {
+      return { date: "Invalid", time: "Invalid" }
     }
   }
 
