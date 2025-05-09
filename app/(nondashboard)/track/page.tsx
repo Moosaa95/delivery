@@ -276,7 +276,7 @@ export default function TrackPage() {
     }
   }
   
-  const formatDateTime = (isoString?: string, timeZone = 'America/New_York') => {
+  const formatDateTime = (isoString?: string | Date, timeZone = 'America/New_York') => {
     if (!isoString) return { date: "Not available", time: "Not available" }
     try {
       const utcDate = new Date(isoString)
