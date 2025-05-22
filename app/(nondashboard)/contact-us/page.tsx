@@ -1,8 +1,52 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import {  MapPin,  ArrowRight } from "lucide-react"
+import { useEffect, useState } from "react"
 
 export default function ContactUs() {
+  const [loading, setLoading] = useState(false)
+  const [result, setResult] = useState('');
+
+
+  const handleSubmit = async (event: React.FormEvent) => {
+  event.preventDefault();
+  const formData = {
+    name: (event.target as any).name.value,
+    email: (event.target as any).email.value,
+    phone: (event.target as any).phone.value,
+    subject: (event.target as any).subject.value,
+    service: (event.target as any).service.value,
+    message: (event.target as any).message.value,
+  };
+
+  setLoading(true);
+  try {
+    const response = await fetch('/api/emails', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+    const data = await response.json();
+    setResult(response.ok && data.accepted ? "Message sent successfully!" : "Failed to send message.");
+  } catch (error) {
+    setResult("Error: Could not send the message.");
+  } finally {
+    setLoading(false);
+  }
+
+};
+
+  useEffect(() => {
+    if (result) {
+      const timer = setTimeout(() => {
+        setResult("");  // Reset the result after 10 seconds
+      }, 10000);
+
+      return () => clearTimeout(timer);  // Cleanup the timer if component is unmounted or result changes
+    }
+  }, [result]);
+
   return (
     <main className="min-h-screen">
       {/* Hero Banner */}
@@ -133,7 +177,7 @@ export default function ContactUs() {
             <div className="bg-white p-8 rounded-lg border border-gray-200 shadow-md">
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Send Us A Message</h3>
               
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">
@@ -142,7 +186,7 @@ export default function ContactUs() {
                     <input
                       type="text"
                       id="fullName"
-                      name="fullName"
+                      name="name"
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
                       required
                     />
@@ -227,11 +271,18 @@ export default function ContactUs() {
                 <div>
                   <button
                     type="submit"
-                    className="bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-md transition-colors duration-200"
+                    className="bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-md transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled={loading}
                   >
-                    Send Message
+                    {loading ? 'Sending...' : 'Send Message'}
                   </button>
                 </div>
+                {result && (
+                  <div className={`mt-4 p-3 rounded-md ${result.includes("successfully") ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>
+                    {result}
+                  </div>
+                )}
+
               </form>
             </div>
           </div>
